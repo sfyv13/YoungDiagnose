@@ -1,0 +1,264 @@
+[
+  {
+    "marka": "Volkswagen",
+    "hisseler": [
+      {
+        "kateqoriya": "Mühərrik",
+        "xetalar": [
+          { "kod": "P0100", "sistem": "Hava Qəbulu", "izah": "Hava axını ölçən (MAF) sensorun elektrik dövrəsində nasazlıq", "sebeb": "Naqil qırılıb və ya fiş çıxıb.", "hell": "Naqilləri yoxlayın, MAF sensorunu dəyişdirin." },
+          { "kod": "P0101", "sistem": "Hava Qəbulu", "izah": "MAF sensorundan yanlış siqnal", "sebeb": "Hava sızması var və ya sensor çirklənib.", "hell": "Hava sistemini yoxlayın, sensoru təmizləyin." },
+          { "kod": "P0102", "sistem": "Hava Qəbulu", "izah": "Hava axını ölçən sensor — aşağı siqnal", "sebeb": "Sensora cərəyan gəlmir.", "hell": "Elektrik dövrəsini yoxlayın." },
+          { "kod": "P0110", "sistem": "Hava Qəbulu", "izah": "Giriş havası temperatur sensoru — xəta", "sebeb": "Sensor sıradan çıxıb.", "hell": "Sensoru dəyişin." },
+          { "kod": "P0115", "sistem": "Soyutma", "izah": "Soyuducu maye temperatur sensoru — nasazlıq", "sebeb": "Termostat və ya sensor xətası.", "hell": "Termostatı və sensoru yoxlayın." },
+          { "kod": "P0120", "sistem": "Yanacaq/Hava", "izah": "Qaz pedalının mövqeyi sensoru — xəta", "sebeb": "Pedal sensoru yeyilib.", "hell": "Pedalı və ya drosseli yoxlayın." },
+          { "kod": "P0171", "sistem": "Yanacaq", "izah": "Qarışıq çox kasıb (bank 1)", "sebeb": "Hava sızması və ya zəif benzin nasosu.", "hell": "Vakuum sızmasını axtarın." },
+          { "kod": "P0172", "sistem": "Yanacaq", "izah": "Qarışıq çox zəngin (bank 1)", "sebeb": "Forsunka axıdır və ya hava filtri dolub.", "hell": "Forsunkanı yoxlayın." },
+          { "kod": "P0300", "sistem": "Alışdırma", "izah": "Alovlanma atlamaları (təsadüfi)", "sebeb": "Sveça və ya babin xətası.", "hell": "Sveçaları dəyişin." },
+          { "kod": "P0301", "sistem": "Alışdırma", "izah": "1-ci silindrdə alovlanma atlaması", "sebeb": "1-ci silindrin sveçası/babini xarabdır.", "hell": "1-ci silindri yoxlayın." },
+          { "kod": "P0325", "sistem": "Sensorlar", "izah": "Detonasiya sensoru — xəta", "sebeb": "Pis yanacaq və ya sensor xətası.", "hell": "Yanacağı dəyişin." },
+          { "kod": "P0335", "sistem": "Sensorlar", "izah": "Krank valı sensoru — nasazlıq", "sebeb": "Sensor maqnitlənib və ya xarab olub.", "hell": "Sensoru dəyişin." },
+          { "kod": "P0340", "sistem": "Sensorlar", "izah": "Paylama valı sensoru — xəta", "sebeb": "QRM səhv qurulub və ya sensor xarabdır.", "hell": "QRM və sensoru yoxlayın." },
+          { "kod": "P0401", "sistem": "EGR", "izah": "EGR sistemində qeyri-kafi axın", "sebeb": "EGR klapanı tutulub.", "hell": "EGR-i təmizləyin." },
+          { "kod": "P0420", "sistem": "Egzoz", "izah": "Katalizatorun aşağı effektivliyi", "sebeb": "Katalizator ölüb.", "hell": "Katalizatoru dəyişin." },
+          { "kod": "P0441", "sistem": "EVAP", "izah": "EVAP sistemində yanlış axın", "sebeb": "Absorber klapanı xarabdır.", "hell": "Klapanı dəyişin." },
+          { "kod": "P0507", "sistem": "Hava Qəbulu", "izah": "Boş işləmə dövrələri yüksək", "sebeb": "Drossel çirklidir.", "hell": "Drosseli yuyun." },
+          { "kod": "P0562", "sistem": "Elektrik", "izah": "Sistem gərginliyi aşağı", "sebeb": "Generator və ya akkumulyator zəifdir.", "hell": "Şarjı ölçün." },
+          { "kod": "P0606", "sistem": "ECU", "izah": "ECU daxili xətası", "sebeb": "Beyin xarab olub.", "hell": "Beyin təmir olunmalıdır." },
+          { "kod": "P1136", "sistem": "Yanacaq", "izah": "Qarışıq korreksiyası — həddə çatıb", "sebeb": "Hava sızması.", "hell": "Duman testi edin." },
+          { "kod": "P1297", "sistem": "Turbo", "izah": "Emiş sistemində hava sızması", "sebeb": "Turbo borusu çatlayıb.", "hell": "Boruları yoxlayın." },
+          { "kod": "P130A", "sistem": "Mühərrik", "izah": "Alovlanma atlamalarına görə silindrin söndürülməsi", "sebeb": "Beyin motoru qoruyur.", "hell": "P0300 səbəbini tapın." },
+          { "kod": "P1649", "sistem": "Elektrik", "izah": "ECU ilə əlaqə itirilib", "sebeb": "CAN xətti qırılıb.", "hell": "Naqilləri yoxlayın." },
+          { "kod": "P2187", "sistem": "Yanacaq", "izah": "Boş işləmədə kasıb qarışıq", "sebeb": "PCV klapanı (Membran).", "hell": "Membranı dəyişin." },
+          { "kod": "P2196", "sistem": "Egzoz", "izah": "Lambda zond zəngin qarışıqda ilişib qalıb", "sebeb": "Sensor xarabdır.", "hell": "Lambda zondu dəyişin." },
+          { "kod": "P2279", "sistem": "Hava Qəbulu", "izah": "Emiş sistemində əlavə hava sızması", "sebeb": "Kollektor contası.", "hell": "Sızmanı tapın." }
+        ]
+      },
+      {
+        "kateqoriya": "Sürət qutusu (DSG/AT)",
+        "xetalar": [
+          { "kod": "P0700", "sistem": "Transmissiya", "izah": "Transmissiya idarəetmə sistemində ümumi xəta", "sebeb": "Beyin xətası.", "hell": "Diaqnostika edin." },
+          { "kod": "P0715", "sistem": "Sensorlar", "izah": "Giriş valı dönmə sensoru", "sebeb": "Sensor xətası.", "hell": "Sensoru dəyişin." },
+          { "kod": "P0720", "sistem": "Sensorlar", "izah": "Çıxış valı sürət sensoru", "sebeb": "Sensor xətası.", "hell": "Sensoru dəyişin." },
+          { "kod": "P0730", "sistem": "Mexanika", "izah": "Yanlış ötürmə nisbəti", "sebeb": "Sürüşmə var.", "hell": "Yağı yoxlayın." },
+          { "kod": "P0731", "sistem": "Mexanika", "izah": "1-ci ötürmə yanlış", "sebeb": "Solenoid və ya mexanika.", "hell": "Solenoidi yoxlayın." },
+          { "kod": "P0732", "sistem": "Mexanika", "izah": "2-ci ötürmə yanlış", "sebeb": "Solenoid və ya mexanika.", "hell": "Solenoidi yoxlayın." },
+          { "kod": "P0733", "sistem": "Mexanika", "izah": "3-cü ötürmə yanlış", "sebeb": "Friksionlar yeyilib.", "hell": "Karobka təmiri." },
+          { "kod": "P0734", "sistem": "Mexanika", "izah": "4-cü ötürmə yanlış", "sebeb": "Mexaniki nasazlıq.", "hell": "Karobka təmiri." },
+          { "kod": "P0740", "sistem": "Hidrotransformator", "izah": "Hidrotransformator muftası", "sebeb": "Bublik kilidlənmir.", "hell": "Bublik təmiri." },
+          { "kod": "P0741", "sistem": "Hidrotransformator", "izah": "Hidrotransformatorun sürüşməsi", "sebeb": "Bublik sürüşür.", "hell": "Bublik təmiri." },
+          { "kod": "P0750", "sistem": "Solenoid", "izah": "A ötürmə solenoidi", "sebeb": "Solenoid yanıb.", "hell": "Solenoidi dəyişin." },
+          { "kod": "P0755", "sistem": "Solenoid", "izah": "B ötürmə solenoidi", "sebeb": "Solenoid yanıb.", "hell": "Solenoidi dəyişin." },
+          { "kod": "P0760", "sistem": "Solenoid", "izah": "C ötürmə solenoidi", "sebeb": "Solenoid yanıb.", "hell": "Solenoidi dəyişin." },
+          { "kod": "P0776", "sistem": "Solenoid", "izah": "Təzyiq tənzimləyicisi", "sebeb": "Təzyiq aşağıdır.", "hell": "Solenoidi yoxlayın." },
+          { "kod": "P0791", "sistem": "Sensorlar", "izah": "Aralıq val sürət sensoru — xəta", "sebeb": "Sensor xətası.", "hell": "Sensoru dəyişin." },
+          { "kod": "P0841", "sistem": "Sensorlar", "izah": "Transmissiya yağ təzyiqi sensoru", "sebeb": "Təzyiq səhvdir.", "hell": "Sensoru yoxlayın." },
+          { "kod": "P0868", "sistem": "Hidravlika", "izah": "Yağ təzyiqi aşağı", "sebeb": "Yağ azdır.", "hell": "Yağ əlavə edin." },
+          { "kod": "P087A", "sistem": "Debriyaj", "izah": "K1 debriyajı — sürüşmə", "sebeb": "Debriyaj bitib.", "hell": "Debriyaj dəyişin." },
+          { "kod": "P087B", "sistem": "Debriyaj", "izah": "K2 debriyajı — sürüşmə", "sebeb": "Debriyaj bitib.", "hell": "Debriyaj dəyişin." },
+          { "kod": "P0900", "sistem": "Elektronika", "izah": "Debriyaj aktuatoru", "sebeb": "Aktuator xarabdır.", "hell": "Aktuatoru dəyişin." },
+          { "kod": "P0919", "sistem": "Mexanizm", "izah": "Seçici mexanizm xətası", "sebeb": "Rıçaq mövqeyi bilinmir.", "hell": "Kalibrasiya edin." },
+          { "kod": "P0962", "sistem": "Solenoid", "izah": "Təzyiq solenoidi", "sebeb": "Elektrik xətası.", "hell": "Naqilləri yoxlayın." },
+          { "kod": "P17BF", "sistem": "Mexatronik", "izah": "Mexatronik bloku həddindən artıq qızma/çat", "sebeb": "Korpus çatlayıb.", "hell": "Remkomplekt qoyun." },
+          { "kod": "P17D8", "sistem": "Mexatronik", "izah": "Debriyajların adaptasiyası", "sebeb": "Adaptasiya getmir.", "hell": "Yenidən cəhd edin." },
+          { "kod": "P189C", "sistem": "Performans", "izah": "Fırlanma anı məhdudlaşdırma", "sebeb": "Qızma var.", "hell": "Soyudun." }
+        ]
+      }
+    ]
+  },
+  {
+    "marka": "Audi",
+    "hisseler": [
+      {
+        "kateqoriya": "Mühərrik",
+        "xetalar": [
+          { "kod": "P0100", "sistem": "Hava Qəbulu", "izah": "Hava kütləvi axını sensorunun dövrəsində nasazlıq", "sebeb": "Naqil problemi.", "hell": "Naqilləri yoxlayın." },
+          { "kod": "P0102", "sistem": "Hava Qəbulu", "izah": "MAF sensorundan aşağı siqnal", "sebeb": "Sızma var.", "hell": "Sızmanı yoxlayın." },
+          { "kod": "P0112", "sistem": "Hava Qəbulu", "izah": "Giriş havası temperatur sensorundan aşağı siqnal", "sebeb": "Sensor xətası.", "hell": "Sensoru dəyişin." },
+          { "kod": "P0117", "sistem": "Soyutma", "izah": "Soyuducu maye temperatur sensorundan aşağı siqnal", "sebeb": "Termostat/sensor.", "hell": "Termostatı yoxlayın." },
+          { "kod": "P0122", "sistem": "Yanacaq/Hava", "izah": "Qaz pedalının mövqeyi sensorundan aşağı siqnal", "sebeb": "Pedal xətası.", "hell": "Pedalı dəyişin." },
+          { "kod": "P0171", "sistem": "Yanacaq", "izah": "Qarışıq çox kasıb (bank 1)", "sebeb": "Hava sızması.", "hell": "Sızmanı axtarın." },
+          { "kod": "P0174", "sistem": "Yanacaq", "izah": "Qarışıq çox kasıb (bank 2)", "sebeb": "Hava sızması.", "hell": "Sızmanı axtarın." },
+          { "kod": "P0300", "sistem": "Alışdırma", "izah": "Təsadüfi alovlanma atlamaları", "sebeb": "Sveçalar.", "hell": "Sveçaları dəyişin." },
+          { "kod": "P0302", "sistem": "Alışdırma", "izah": "2-ci silindrdə alovlanma atlaması", "sebeb": "2-ci silindr sveçası.", "hell": "Sveçanı dəyişin." },
+          { "kod": "P0327", "sistem": "Sensorlar", "izah": "Detonasiya sensorundan aşağı siqnal", "sebeb": "Naqil əriyib.", "hell": "Naqili bərpa edin." },
+          { "kod": "P0336", "sistem": "Sensorlar", "izah": "Krank valı sensorundan yanlış siqnal", "sebeb": "Dişli çarx zədələnib.", "hell": "Yoxlayın." },
+          { "kod": "P0341", "sistem": "Mühərrik", "izah": "Paylama valı fazalarının uyğunsuzluğu", "sebeb": "Sep uzanıb.", "hell": "Sepi dəyişin." },
+          { "kod": "P0366", "sistem": "Sensorlar", "izah": "Paylama valı sensoru (bank 1)", "sebeb": "Sensor xətası.", "hell": "Sensoru dəyişin." },
+          { "kod": "P0402", "sistem": "EGR", "izah": "EGR sistemində həddindən artıq axın", "sebeb": "Klapan ilişib.", "hell": "Klapanı təmizləyin." },
+          { "kod": "P0411", "sistem": "Hava Sistemi", "izah": "İkinci hava sistemində yanlış axın", "sebeb": "Nasos işləmir.", "hell": "Nasosu yoxlayın." },
+          { "kod": "P0421", "sistem": "Egzoz", "izah": "Katalizatorun qızma effektivliyi aşağı", "sebeb": "Katalizator zəifdir.", "hell": "Dəyişdirin." },
+          { "kod": "P0442", "sistem": "EVAP", "izah": "EVAP sistemində kiçik sızma", "sebeb": "Bak qapağı.", "hell": "Qapağı sıxın." },
+          { "kod": "P0506", "sistem": "Hava Qəbulu", "izah": "Boş işləmə dövrələri aşağı", "sebeb": "Drossel çirklidir.", "hell": "Drosseli yuyun." },
+          { "kod": "P0563", "sistem": "Elektrik", "izah": "Sistem gərginliyi yüksək", "sebeb": "Generator xətası.", "hell": "Generatoru yoxlayın." },
+          { "kod": "P0601", "sistem": "ECU", "izah": "ECU-nun yoxlama cəmi xətası", "sebeb": "Proqram xətası.", "hell": "Beyin yazılmalıdır." },
+          { "kod": "P068A", "sistem": "Elektrik", "izah": "ECU qidalanma rölesi — erkən söndürülmə", "sebeb": "Rele xarabdır.", "hell": "Releni dəyişin." },
+          { "kod": "P1093", "sistem": "Yanacaq", "izah": "Yük altında qarışığın kasıblaşması", "sebeb": "TNV (Nasos) zəifdir.", "hell": "Nasosu yoxlayın." },
+          { "kod": "P1138", "sistem": "Yanacaq", "izah": "Qarışıq korreksiyası — həddə çatıb", "sebeb": "Forsunka.", "hell": "Forsunkanı yoxlayın." },
+          { "kod": "P2189", "sistem": "Yanacaq", "izah": "Boş işləmədə kasıb qarışıq", "sebeb": "Membran cırılıb.", "hell": "Membranı dəyişin." },
+          { "kod": "P2270", "sistem": "Egzoz", "izah": "Lambda zond — aktivlik yoxdur", "sebeb": "Sensor xətası.", "hell": "Sensoru dəyişin." }
+        ]
+      },
+      {
+        "kateqoriya": "Sürət qutusu (S tronic / Tiptronic)",
+        "xetalar": [
+          { "kod": "P0700", "sistem": "Transmissiya", "izah": "Transmissiya idarəetmə sistemində ümumi xəta", "sebeb": "Beyin əlaqəsi.", "hell": "Diaqnostika." },
+          { "kod": "P0716", "sistem": "Sensorlar", "izah": "Giriş dönmə sensorunun yanlış diapazonu", "sebeb": "Sensor xətası.", "hell": "Sensoru dəyişin." },
+          { "kod": "P0722", "sistem": "Sensorlar", "izah": "Çıxış dönmə sensorundan siqnal yoxdur", "sebeb": "Sensor yanıb.", "hell": "Sensoru dəyişin." },
+          { "kod": "P0735", "sistem": "Mexanika", "izah": "Yanlış ötürmə nisbəti (5-ci ötürmə)", "sebeb": "5-ci ötürmə yeyilib.", "hell": "Karobka ustası." },
+          { "kod": "P0746", "sistem": "Solenoid", "izah": "Təzyiq solenoidi — ilişib qalıb", "sebeb": "Çirklilik.", "hell": "Yuyulmalıdır." },
+          { "kod": "P0748", "sistem": "Solenoid", "izah": "Təzyiq solenoidi — elektrik xətası", "sebeb": "Naqil qırılıb.", "hell": "Naqili yoxlayın." },
+          { "kod": "P0753", "sistem": "Solenoid", "izah": "A ötürmə solenoidi — elektrik xətası", "sebeb": "Solenoid yanıb.", "hell": "Dəyişin." },
+          { "kod": "P0758", "sistem": "Solenoid", "izah": "B ötürmə solenoidi — ilişib qalıb", "sebeb": "Mexaniki ilişmə.", "hell": "Dəyişin." },
+          { "kod": "P0763", "sistem": "Solenoid", "izah": "C ötürmə solenoidi — elektrik xətası", "sebeb": "Naqil qırılıb.", "hell": "Yoxlayın." },
+          { "kod": "P0777", "sistem": "Solenoid", "izah": "Təzyiq tənzimləyicisi — ilişib qalıb", "sebeb": "Klapan ilişib.", "hell": "Dəyişin." },
+          { "kod": "P0796", "sistem": "Solenoid", "izah": "Təzyiq solenoidi — diapazon/xüsusiyyət", "sebeb": "Təzyiq problemi.", "hell": "Yoxlayın." },
+          { "kod": "P0842", "sistem": "Sensorlar", "izah": "Transmissiya yağ təzyiqi sensorundan aşağı siqnal", "sebeb": "Yağ azdır.", "hell": "Yağ tökün." },
+          { "kod": "P0864", "sistem": "ECU", "izah": "TCM ilə əlaqə xətası", "sebeb": "CAN xətti.", "hell": "Elektrik işi." },
+          { "kod": "P0869", "sistem": "Hidravlika", "izah": "Transmissiya yağ təzyiqi yüksək", "sebeb": "Klapan ilişib.", "hell": "Hidroblok." },
+          { "kod": "P0871", "sistem": "Sensorlar", "izah": "Təzyiq sensoru — diapazon/xüsusiyyət", "sebeb": "Sensor xətası.", "hell": "Dəyişin." },
+          { "kod": "P0894", "sistem": "Mexanika", "izah": "Sürət qutusu elementlərinin sürüşməsi", "sebeb": "Friksionlar yeyilib.", "hell": "Karobka təmiri." },
+          { "kod": "P0902", "sistem": "Aktuator", "izah": "Debriyaj aktuatoru — aşağı dövrə", "sebeb": "Cərəyan gəlmir.", "hell": "Sigortanı yoxlayın." },
+          { "kod": "P0915", "sistem": "Mexanizm", "izah": "Seçici mövqe sensorunun diapazonu", "sebeb": "Rıçaq xətası.", "hell": "Yoxlayın." },
+          { "kod": "P0960", "sistem": "Solenoid", "izah": "Təzyiq solenoidi — açıq dövrə", "sebeb": "Kabel qırılıb.", "hell": "Yoxlayın." },
+          { "kod": "P0965", "sistem": "Solenoid", "izah": "Təzyiq solenoidi — diapazon/xüsusiyyət", "sebeb": "Solenoid xətası.", "hell": "Dəyişin." },
+          { "kod": "P17D0", "sistem": "Debriyaj", "izah": "K1 debriyajı — həddindən artıq qızma", "sebeb": "Çox qızıb.", "hell": "Soyudun." },
+          { "kod": "P17D1", "sistem": "Debriyaj", "izah": "K2 debriyajı — həddindən artıq qızma", "sebeb": "Çox qızıb.", "hell": "Soyudun." },
+          { "kod": "P17BF", "sistem": "Mexatronik", "izah": "Mexatronik bloku həddindən artıq qızma/nasos", "sebeb": "Korpus çatı.", "hell": "Remkomplekt." },
+          { "kod": "P1895", "sistem": "Adaptasiya", "izah": "Sürət qutusunun adaptasiya xətası", "sebeb": "Təzyiq itkisi.", "hell": "Sızmanı tapın." },
+          { "kod": "P17F0", "sistem": "Performans", "izah": "Sürət qutusu səbəbindən fırlanma anı məhdudlaşdırma", "sebeb": "Qoruma rejimi.", "hell": "Diaqnostika." }
+        ]
+      }
+    ]
+  },
+  {
+    "marka": "BMW",
+    "hisseler": [
+      {
+        "kateqoriya": "Mühərrik",
+        "xetalar": [
+          { "kod": "P0101", "sistem": "Hava Qəbulu", "izah": "Hava axını sensorundan (MAF) yanlış siqnal", "sebeb": "Hava filtri/MAF.", "hell": "Dəyişin." },
+          { "kod": "P0102", "sistem": "Hava Qəbulu", "izah": "MAF sensorundan aşağı siqnal", "sebeb": "Sızma.", "hell": "Yoxlayın." },
+          { "kod": "P0113", "sistem": "Hava Qəbulu", "izah": "Giriş havası temperatur sensorundan yüksək siqnal", "sebeb": "Sensor xətası.", "hell": "Dəyişin." },
+          { "kod": "P0128", "sistem": "Soyutma", "izah": "Mühərrik iş temperaturuna çıxmır", "sebeb": "Termostat açıq qalıb.", "hell": "Termostatı dəyişin." },
+          { "kod": "P0171", "sistem": "Yanacaq", "izah": "Qarışıq çox kasıb (bank 1)", "sebeb": "Vakuum sızması.", "hell": "KVG-ni yoxlayın." },
+          { "kod": "P0174", "sistem": "Yanacaq", "izah": "Qarışıq çox kasıb (bank 2)", "sebeb": "Vakuum sızması.", "hell": "KVG-ni yoxlayın." },
+          { "kod": "P0300", "sistem": "Alışdırma", "izah": "Təsadüfi alovlanma atlamaları", "sebeb": "Sveça/Babin.", "hell": "Dəyişin." },
+          { "kod": "P0303", "sistem": "Alışdırma", "izah": "3-cü silindrdə alovlanma atlaması", "sebeb": "Sveça/Babin.", "hell": "Dəyişin." },
+          { "kod": "P0305", "sistem": "Alışdırma", "izah": "5-ci silindrdə alovlanma atlaması", "sebeb": "Sveça/Babin.", "hell": "Dəyişin." },
+          { "kod": "P0328", "sistem": "Sensorlar", "izah": "Detonasiya sensorundan yüksək siqnal", "sebeb": "Sensor xətası.", "hell": "Dəyişin." },
+          { "kod": "P0335", "sistem": "Sensorlar", "izah": "Krank valı sensoru — nasazlıq", "sebeb": "Sensor xətası.", "hell": "Dəyişin." },
+          { "kod": "P0340", "sistem": "Sensorlar", "izah": "Paylama valı sensoru — xəta", "sebeb": "Sensor xətası.", "hell": "Dəyişin." },
+          { "kod": "P0365", "sistem": "Sensorlar", "izah": "Paylama valı sensoru (bank 1)", "sebeb": "Sensor xətası.", "hell": "Dəyişin." },
+          { "kod": "P0369", "sistem": "Sensorlar", "izah": "Paylama valı sensorunun qeyri-stabil siqnalı", "sebeb": "Naqil xətası.", "hell": "Yoxlayın." },
+          { "kod": "P0420", "sistem": "Egzoz", "izah": "Katalizatorun aşağı effektivliyi", "sebeb": "Katalizator dolub.", "hell": "Dəyişin." },
+          { "kod": "P0430", "sistem": "Egzoz", "izah": "Katalizatorun aşağı effektivliyi (bank 2)", "sebeb": "Katalizator dolub.", "hell": "Dəyişin." },
+          { "kod": "P0440", "sistem": "EVAP", "izah": "EVAP sistemində nasazlıq", "sebeb": "Sızma var.", "hell": "Test edin." },
+          { "kod": "P0446", "sistem": "EVAP", "izah": "EVAP ventilyasiya klapanı", "sebeb": "Klapan xarabdır.", "hell": "Dəyişin." },
+          { "kod": "P0500", "sistem": "Sensorlar", "izah": "Avtomobil sürət siqnalı yoxdur", "sebeb": "ABS sensoru.", "hell": "Yoxlayın." },
+          { "kod": "P0505", "sistem": "Hava Qəbulu", "izah": "Boş işləmə tənzimləyicisi xətası", "sebeb": "Klapan çirklidir.", "hell": "Yuyun." },
+          { "kod": "P0597", "sistem": "Soyutma", "izah": "Termostat — dövrədə açıq", "sebeb": "Qızdırıcı yanıb.", "hell": "Termostatı dəyişin." },
+          { "kod": "P0604", "sistem": "ECU", "izah": "ECU operativ yaddaş xətası", "sebeb": "Beyin xətası.", "hell": "Təmir." },
+          { "kod": "P0615", "sistem": "Start", "izah": "Starter rölesi — xəta", "sebeb": "Rele yanıb.", "hell": "Dəyişin." },
+          { "kod": "P112F", "sistem": "Yanacaq", "izah": "Qarışıq adaptasiyası — həddə çatıb", "sebeb": "Sızma.", "hell": "Duman testi." },
+          { "kod": "P1338", "sistem": "VANOS", "izah": "VANOS — fazaların gecikməsi", "sebeb": "Solenoid çirklidir.", "hell": "Yuyun/Dəyişin." }
+        ]
+      }
+    ]
+  },
+      {
+        "kateqoriya": "Sürət qutusu (ZF 6HP / 8HP)",
+        "xetalar": [
+          { "kod": "P0700", "sistem": "Transmissiya", "izah": "Transmissiya idarəetmə sistemində ümumi xəta", "sebeb": "Ümumi xəta.", "hell": "Kodları oxuyun." },
+          { "kod": "P0715", "sistem": "Sensorlar", "izah": "Giriş valı dönmə sensoru", "sebeb": "Sensor xətası.", "hell": "Platanı yoxlayın." },
+          { "kod": "P0720", "sistem": "Sensorlar", "izah": "Çıxış valı sürət sensoru", "sebeb": "Sensor xətası.", "hell": "Platanı yoxlayın." },
+          { "kod": "P0730", "sistem": "Mexanika", "izah": "Yanlış ötürmə nisbəti", "sebeb": "Sürüşmə.", "hell": "Yağı yoxlayın." },
+          { "kod": "P0731", "sistem": "Mexanika", "izah": "1-ci ötürmə yanlış", "sebeb": "Solenoid/Mexanika.", "hell": "Yoxlayın." },
+          { "kod": "P0732", "sistem": "Mexanika", "izah": "2-ci ötürmə yanlış", "sebeb": "Solenoid/Mexanika.", "hell": "Yoxlayın." },
+          { "kod": "P0733", "sistem": "Mexanika", "izah": "3-cü ötürmə yanlış", "sebeb": "Solenoid/Mexanika.", "hell": "Yoxlayın." },
+          { "kod": "P0741", "sistem": "Hidrotransformator", "izah": "Hidrotransformator muftasının sürüşməsi", "sebeb": "Bublik problemi.", "hell": "Bublik təmiri." },
+          { "kod": "P0748", "sistem": "Solenoid", "izah": "Təzyiq solenoidi — elektrik xətası", "sebeb": "Kabel.", "hell": "Yoxlayın." },
+          { "kod": "P0751", "sistem": "Solenoid", "izah": "A ötürmə solenoidi — diapazon", "sebeb": "Solenoid.", "hell": "Dəyişin." },
+          { "kod": "P0756", "sistem": "Solenoid", "izah": "B ötürmə solenoidi — diapazon", "sebeb": "Solenoid.", "hell": "Dəyişin." },
+          { "kod": "P0761", "sistem": "Solenoid", "izah": "C ötürmə solenoidi — diapazon", "sebeb": "Solenoid.", "hell": "Dəyişin." },
+          { "kod": "P0770", "sistem": "Solenoid", "izah": "E solenoidi — nasazlıq", "sebeb": "Solenoid.", "hell": "Dəyişin." },
+          { "kod": "P0776", "sistem": "Solenoid", "izah": "Təzyiq tənzimləyicisi — ilişib qalıb", "sebeb": "Tıxanma.", "hell": "Yuyun/Dəyişin." },
+          { "kod": "P0796", "sistem": "Solenoid", "izah": "Təzyiq solenoidi — diapazon", "sebeb": "Solenoid.", "hell": "Dəyişin." },
+          { "kod": "P0841", "sistem": "Sensorlar", "izah": "Transmissiya yağ təzyiqi sensoru", "sebeb": "Sensor.", "hell": "Dəyişin." },
+          { "kod": "P0868", "sistem": "Hidravlika", "izah": "Transmissiya yağ təzyiqi aşağı", "sebeb": "Yağ azdır.", "hell": "Yağ əlavə edin." },
+          { "kod": "P0871", "sistem": "Sensorlar", "izah": "Təzyiq sensoru — diapazon", "sebeb": "Sensor.", "hell": "Dəyişin." },
+          { "kod": "P0894", "sistem": "Mexanika", "izah": "Sürət qutusu elementlərinin sürüşməsi", "sebeb": "Friksionlar.", "hell": "Təmir." },
+          { "kod": "P0900", "sistem": "Aktuator", "izah": "Debriyaj aktuatoru — nasazlıq", "sebeb": "Aktuator.", "hell": "Dəyişin." },
+          { "kod": "P0919", "sistem": "Mexanizm", "izah": "Ötürmə seçici diapazonu", "sebeb": "Rıçaq.", "hell": "Kalibrasiya." },
+          { "kod": "P0962", "sistem": "Solenoid", "izah": "Təzyiq solenoidi — aşağı siqnal", "sebeb": "Kabel.", "hell": "Yoxlayın." },
+          { "kod": "P0973", "sistem": "Solenoid", "izah": "Təzyiq solenoidi — yüksək siqnal", "sebeb": "Kabel.", "hell": "Yoxlayın." },
+          { "kod": "P17E1", "sistem": "Performans", "izah": "Transmissiyanın həddindən artıq qızması", "sebeb": "Soyutma sistemi.", "hell": "Yuyun." },
+          { "kod": "P17F1", "sistem": "Performans", "izah": "Sürət qutusu səbəbindən fırlanma anı məhdudlaşdırma", "sebeb": "Qoruma.", "hell": "Diaqnostika." }
+        ]
+      },
+      {
+    "marka": "Mercedes-Benz",
+    "hisseler": [
+      {
+        "kateqoriya": "Mühərrik",
+        "xetalar": [
+          { "kod": "P0100", "sistem": "Hava Qəbulu", "izah": "Hava axını sensorunun dövrəsində nasazlıq", "sebeb": "MAF xətası.", "hell": "Dəyişin." },
+          { "kod": "P0101", "sistem": "Hava Qəbulu", "izah": "MAF sensorunun siqnal diapazonu yanlış", "sebeb": "MAF çirklidir.", "hell": "Təmizləyin." },
+          { "kod": "P0110", "sistem": "Hava Qəbulu", "izah": "Giriş havası temperatur sensoru — xəta", "sebeb": "Sensor.", "hell": "Dəyişin." },
+          { "kod": "P0115", "sistem": "Soyutma", "izah": "Soyuducu maye temperatur sensoru", "sebeb": "Sensor.", "hell": "Dəyişin." },
+          { "kod": "P0120", "sistem": "Yanacaq/Hava", "izah": "Qaz pedalının mövqeyi sensoru", "sebeb": "Pedal.", "hell": "Dəyişin." },
+          { "kod": "P0170", "sistem": "Yanacaq", "izah": "Qarışıq korreksiyası — nasazlıq", "sebeb": "Ümumi yanacaq xətası.", "hell": "Sistemi yoxlayın." },
+          { "kod": "P0173", "sistem": "Yanacaq", "izah": "Qarışıq korreksiyası — bank 2", "sebeb": "Ümumi yanacaq xətası.", "hell": "Sistemi yoxlayın." },
+          { "kod": "P0300", "sistem": "Alışdırma", "izah": "Təsadüfi alovlanma atlamaları", "sebeb": "Sveça/Babin.", "hell": "Dəyişin." },
+          { "kod": "P0306", "sistem": "Alışdırma", "izah": "6-cı silindrdə alovlanma atlaması", "sebeb": "Sveça/Babin.", "hell": "Dəyişin." },
+          { "kod": "P0320", "sistem": "Sensorlar", "izah": "Mühərrik dönmə sensoru — xəta", "sebeb": "Sensor.", "hell": "Dəyişin." },
+          { "kod": "P0335", "sistem": "Sensorlar", "izah": "Krank valı sensoru — nasazlıq", "sebeb": "Sensor qızır.", "hell": "Dəyişin." },
+          { "kod": "P0340", "sistem": "Sensorlar", "izah": "Paylama valı sensoru — xəta", "sebeb": "Sensor.", "hell": "Dəyişin." },
+          { "kod": "P0410", "sistem": "Hava Sistemi", "izah": "İkinci hava sistemi — nasazlıq", "sebeb": "Nasos/Rele.", "hell": "Yoxlayın." },
+          { "kod": "P0411", "sistem": "Hava Sistemi", "izah": "İkinci hava axınında yanlışlıq", "sebeb": "Nasos.", "hell": "Yoxlayın." },
+          { "kod": "P0420", "sistem": "Egzoz", "izah": "Katalizatorun aşağı effektivliyi", "sebeb": "Katalizator.", "hell": "Dəyişin." },
+          { "kod": "P0430", "sistem": "Egzoz", "izah": "Katalizatorun aşağı effektivliyi (bank 2)", "sebeb": "Katalizator.", "hell": "Dəyişin." },
+          { "kod": "P0443", "sistem": "EVAP", "izah": "EVAP təmizləmə klapanı", "sebeb": "Klapan.", "hell": "Dəyişin." },
+          { "kod": "P0455", "sistem": "EVAP", "izah": "EVAP sistemində böyük sızma", "sebeb": "Qapaq/Borular.", "hell": "Sızmanı tapın." },
+          { "kod": "P0500", "sistem": "Sensorlar", "izah": "Avtomobil sürət siqnalı yoxdur", "sebeb": "ABS.", "hell": "Yoxlayın." },
+          { "kod": "P0501", "sistem": "Sensorlar", "izah": "Sürət sensorunun diapazonu", "sebeb": "Sensor.", "hell": "Yoxlayın." },
+          { "kod": "P0560", "sistem": "Elektrik", "izah": "Bort şəbəkə gərginliyi — xəta", "sebeb": "Generator/Akumulyator.", "hell": "Ölçün." },
+          { "kod": "P0600", "sistem": "ECU", "izah": "CAN şinası üzrə əlaqə xətası", "sebeb": "Naqillər.", "hell": "Yoxlayın." },
+          { "kod": "P0605", "sistem": "ECU", "izah": "ECU daimi yaddaş xətası", "sebeb": "Beyin.", "hell": "Dəyişin." },
+          { "kod": "P0620", "sistem": "Elektrik", "izah": "Generator idarəetməsi — xəta", "sebeb": "Generator.", "hell": "Təmir." },
+          { "kod": "P200B", "sistem": "Hava Qəbulu", "izah": "Emiş kollektoru klapanları", "sebeb": "Plastik qollar qırılıb.", "hell": "Remkomplekt." }
+        ]
+      }
+    ]
+  },
+      {
+        "kateqoriya": "Sürət qutusu (722.6 / 722.9)",
+        "xetalar": [
+          { "kod": "P0700", "sistem": "Transmissiya", "izah": "Transmissiya idarəetmə sistemində ümumi xəta", "sebeb": "Ümumi xəta.", "hell": "Diaqnostika." },
+          { "kod": "P0717", "sistem": "Sensorlar", "izah": "Giriş dönmə sensorundan siqnal yoxdur", "sebeb": "Plata (Conductor Plate).", "hell": "Platanı dəyişin." },
+          { "kod": "P0725", "sistem": "Sensorlar", "izah": "Mühərrik dönmə sensoru — xəta", "sebeb": "Sensor.", "hell": "Yoxlayın." },
+          { "kod": "P0730", "sistem": "Mexanika", "izah": "Yanlış ötürmə nisbəti", "sebeb": "Sürüşmə.", "hell": "Yağı yoxlayın." },
+          { "kod": "P0731", "sistem": "Mexanika", "izah": "1-ci ötürmə yanlış", "sebeb": "Mexanika.", "hell": "Təmir." },
+          { "kod": "P0732", "sistem": "Mexanika", "izah": "2-ci ötürmə yanlış", "sebeb": "Mexanika.", "hell": "Təmir." },
+          { "kod": "P0733", "sistem": "Mexanika", "izah": "3-cü ötürmə yanlış", "sebeb": "Mexanika.", "hell": "Təmir." },
+          { "kod": "P0734", "sistem": "Mexanika", "izah": "4-cü ötürmə yanlış", "sebeb": "Mexanika.", "hell": "Təmir." },
+          { "kod": "P0740", "sistem": "Hidrotransformator", "izah": "Hidrotransformator muftası", "sebeb": "Bublik.", "hell": "Təmir." },
+          { "kod": "P0743", "sistem": "Hidrotransformator", "izah": "Hidrotransformator solenoidinin elektrik xətası", "sebeb": "Kabel.", "hell": "Yoxlayın." },
+          { "kod": "P0750", "sistem": "Solenoid", "izah": "A ötürmə solenoidi", "sebeb": "Solenoid.", "hell": "Dəyişin." },
+          { "kod": "P0755", "sistem": "Solenoid", "izah": "B ötürmə solenoidi", "sebeb": "Solenoid.", "hell": "Dəyişin." },
+          { "kod": "P0760", "sistem": "Solenoid", "izah": "C ötürmə solenoidi", "sebeb": "Solenoid.", "hell": "Dəyişin." },
+          { "kod": "P0778", "sistem": "Solenoid", "izah": "Təzyiq tənzimləyicisi — yüksək siqnal", "sebeb": "Solenoid.", "hell": "Dəyişin." },
+          { "kod": "P0793", "sistem": "Sensorlar", "izah": "Aralıq val dönmə sensoru", "sebeb": "Plata xətası.", "hell": "Platanı dəyişin." },
+          { "kod": "P0846", "sistem": "Sensorlar", "izah": "Transmissiya yağ təzyiqi sensoru", "sebeb": "Sensor.", "hell": "Dəyişin." },
+          { "kod": "P0864", "sistem": "ECU", "izah": "TCM ilə əlaqə xətası", "sebeb": "CAN xətti.", "hell": "Yoxlayın." },
+          { "kod": "P0870", "sistem": "Sensorlar", "izah": "Təzyiq sensoru — nasazlıq", "sebeb": "Sensor.", "hell": "Dəyişin." },
+          { "kod": "P0894", "sistem": "Mexanika", "izah": "Sürət qutusu elementlərinin sürüşməsi", "sebeb": "Friksionlar.", "hell": "Karobka təmiri." },
+          { "kod": "P0896", "sistem": "Mexanika", "izah": "Ötürmə vaxtı çox uzundur", "sebeb": "Təzyiq/Yağ.", "hell": "Yağı yoxlayın." },
+          { "kod": "P0903", "sistem": "Aktuator", "izah": "Debriyaj aktuatoru — yüksək siqnal", "sebeb": "Aktuator.", "hell": "Yoxlayın." },
+          { "kod": "P0920", "sistem": "Aktuator", "izah": "Ötürmə seçici aktuatoru", "sebeb": "Rıçaq.", "hell": "Yoxlayın." },
+          { "kod": "P0963", "sistem": "Solenoid", "izah": "Təzyiq solenoidi — açıq dövrə", "sebeb": "Kabel.", "hell": "Yoxlayın." },
+          { "kod": "P0970", "sistem": "Solenoid", "izah": "Təzyiq solenoidi — yüksək siqnal", "sebeb": "Kabel.", "hell": "Yoxlayın." },
+          { "kod": "P17A0", "sistem": "Performans", "izah": "AKPP-nin həddindən artıq qızması", "sebeb": "Soyutma.", "hell": "Radiatoru yuyun." }
+        ]
+      }
+    ]
+  
