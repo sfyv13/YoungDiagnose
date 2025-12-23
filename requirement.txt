@@ -1,3 +1,2 @@
 flask
 flask-cors
-#Ferkan bu tool-lardan istifade etmelidir.
