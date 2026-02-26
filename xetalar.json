@@ -63,17 +63,7 @@
         ]
       }
     ]
-  }
-]
-
-
-
-
-
-
-
-
-[
+  },
   {
     "marka": "Audi",
     "hisseler": [
@@ -138,16 +128,7 @@
         ]
       }
     ]
-  }
-]
-
-
-
-
-
-
-
-[
+  },
   {
     "marka": "BMW",
     "hisseler": [
@@ -180,7 +161,9 @@
           { "kod": "P1020", "sistem": "Valvetronic Sistemi", "izah": "Valvetronic mühərrikinin tənzimləmə oxu kompyuterin əmrlərinə zidd hərəkət edir.", "sebeb": "Valvetronic mühərrikinin daxili dişliləri yeyilib və ya mexanizm ilişib.", "hell": "Valvetronic mühərriyini söküb yoxlayın və nasazdırsa ehtiyat hissəsi ilə əvəzləyin." },
           { "kod": "P0087", "sistem": "Yanacaq Sistemi", "izah": "Yüksək təzyiq yanacaq xəttində (HPFP) təzyiq minimum işçi həddinin altına düşüb.", "sebeb": "Yüksək təzyiq nasosu daxili aşınmaya məruz qalaraq sıxışdırma qabiliyyətini itirib.", "hell": "Yüksək təzyiq yanacaq nasosunu tam komplekt şəkildə yeniləyin." }
         ]
-      },
+      }
+    ]
+  },
       {
         "kateqoriya": "Sürət Qutusu",
         "xetalar": [
@@ -210,19 +193,7 @@
           { "kod": "P2704", "sistem": "Sürtünmə Elementi", "izah": "Sürtünmə elementi 'E' üçün ötürmə zamanı nəzərdə tutulan sürtünmə səviyyəsi təmin olunmur.", "sebeb": "E elementinin hidravlik kanalını idarə edən rezin tübiklər (silindrlər) partlayıb.", "hell": "Mexatroniki sökərək altındakı kiçik rezin silindrləri dəyişdirin." },
           { "kod": "P0218", "sistem": "Temperatur Sistemi", "izah": "Sürət qutusunun daxilindəki yağın temperaturu kritik qoruma həddini aşıb.", "sebeb": "Sürət qutusunun istilik dəyişdiricisi (radiatoru) tıxanıb və soyutma funksiyasını itirib.", "hell": "Sürət qutusu radiatorunu çıxarıb yuyun və sürət qutusu yağını tam yeniləyin." }
         ]
-      }
-    ]
-  }
-]
-
-
-
-
-
-
-
-
-[
+      },
   {
     "marka": "Mercedes Benz",
     "hisseler": [
@@ -287,14 +258,7 @@
         ]
       }
     ]
-  }
-]
-
-
-
-
-
-[
+  },
   {
     "marka": "Opel",
     "hisseler": [
@@ -359,23 +323,7 @@
         ]
       }
     ]
-  }
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[
+  },
   {
     "marka": "Toyota",
     "hisseler": [
@@ -440,20 +388,7 @@
         ]
       }
     ]
-  }
-]
-
-
-
-
-
-
-
-
-
-
-
-[
+  },
   {
     "marka": "Hyundai",
     "hisseler": [
@@ -518,20 +453,7 @@
         ]
       }
     ]
-  }
-]
-
-
-
-
-
-
-
-
-
-
-
-[
+  },
   {
     "marka": "Kia",
     "hisseler": [
@@ -590,25 +512,11 @@
           { "kod": "P0770", "sistem": "Ötürmə Solenoidi", "izah": "'E' ötürmə solenoidinin fəaliyyəti ilişmə və ya donma səbəbindən idarəetmə tərəfindən məcburi ləğv edilib.", "sebeb": "Sürət qutusunun içində uzun müddət toplanan metal zibil kütləsi solenoidin klapanını hərəkətdən salaraq bloklayıb.", "hell": "Hidravlik plitəni (beyni) dərindən söküb yuyucu maddələrlə təmizləyərək klapanların sərbəst fəaliyyətini təmin edin." },
           { "kod": "P0841", "sistem": "Təzyiq Sensoru", "izah": "Sürət qutusunun hidravlik təzyiq sensorunun oxuduğu dəyərlər TCM-in real tələblərini qarşılamır.", "sebeb": "Sensorun qəbuledici diafraqmasına sərt yad cism ilişərək onun təzyiqi oxuma həssaslığını fiziki olaraq məhv edib.", "hell": "Təzyiq sensorunu söküb yeni orijinal hissə ilə əvəzləyərək idarəetmə blokunda yenidən kalibrasiya prosesi aparın." },
           { "kod": "P0880", "sistem": "İdarəetmə Sistemi", "izah": "TCM modulunun qidalanma gərginliyində (Power Input) kəsinti və ya idarəetməni söndürən kəskin aşağı düşmə var.", "sebeb": "Avtomobilin akkumulyator gərginliyi zəifləyib və ya TCM blokuna cərəyan verən ana elektrik relesi yanaraq xarab olub.", "hell": "Akkumulyatoru və sürət qutusunun qidalanma relelərini xüsusi cihazla yoxlayaraq sabit cərəyan axınını bərpa edin." },
-          { "kod": "P2709", "sistem": "Ötürmə Solenoidi", "izah": "'F' ötürmə solenoidinin idarəetmə dövrəsində qəfil elektron kəsinti aşkarlanıb və sistem ötürməni bloklayıb.", "sebeb": "Solenoid daxilindəki mis sarğıda qısaqapanma var və ya elektron platadan solenoidə gələn elektrik xətti yanıb.", "hell": "Elektron platanı və S/F solenoidini multimetrlə birgə yoxlayın, arızalı olan komponenti yeni ehtiyat detalı ilə əvəzləyin." },
+          { "kod": "P2709", "sistem": "Ötürmə Solenoidi", "izah": "'F' ötürmə solenoidinin idarəetmə dövrəsində qəfil elektron kəsinti aşkarlanıb və sistem ötürməni bloklayıb.", "sebeb": "Solenoid daxilindəki mis sarğıda qısaqapanma var və ya elektron platadan solenoidə gələn elektrik xətti yanıb.", "hell": "Elektron platanı və S/F solenoidini multimetrlə birgə yoxlayın, arızalı olan komponenti yeni ehtiyat detalı ilə əvəzləyin." }
         ]
       }
     ]
-  }
-]
-
-
-
-
-
-
-
-
-
-
-
-
-[
+  },
   {
     "marka": "Nissan",
     "hisseler": [
@@ -667,25 +575,11 @@
           { "kod": "P1778", "sistem": "Step Motor", "izah": "Pillə motorunun kompyuter tərəfindən tələb edilən mövqeyi ilə faktiki fəaliyyəti arasında uyğunsuzluq var.", "sebeb": "Step motor işləsə də, onun idarə etdiyi hidravlik klapan palçıqlı yağdan tıxanaraq hərəkət etmir.", "hell": "Hidrobloku (beyni) sökərək xüsusi aparatda dərindən yuyun və step motor klapanının sərbəstliyini təmin edin." },
           { "kod": "P2857", "sistem": "Kavrama Təzyiqi", "izah": "Kavrama (Clutch) 'A' təzyiqinin qoşulma performansı TCM-in tələb etdiyi riyazi cədvəldən kənara çıxıb.", "sebeb": "A qrupu hidravlik porşenində rezin contanın cırılması səbəbindən sıxma təzyiqi yağ sızıntısı yaradır.", "hell": "Sürət qutusunu sökərək daxili A paketinin rezinlərini və yanmış frikson (sürtünmə) disklərini tam yeniləyin." },
           { "kod": "P2858", "sistem": "Kavrama Təzyiqi", "izah": "Kavrama 'B' üçün təzyiqin idarəolunması zamanı nəzərdə tutulan sürtünmə qüvvəsi təmin oluna bilmir.", "sebeb": "B paketini idarə edən mərkəzi hidroblokun yağ kanalları keyfiyyətini itirmiş qalın yağdan tıxanıb.", "hell": "Hidravlik plitəni xüsusi həlledici ilə dərindən təmizləyin və bütün valfların (klapanların) hərəkətini təmin edin." },
-          { "kod": "P0731", "sistem": "Ötürmə Mexanizmi", "izah": "Birinci pillədə hərəkətə başlayarkən mühərrik dövriyyəsi artır amma avtomobil çox gec və ya vuraraq reaksiya verir.", "sebeb": "Birinci pillənin hidravlik porşeni rezin contanın aşınması səbəbindən vurduğu yağı kənara buraxır.", "hell": "Sürət qutusunu sökərək birinci pillənin daxili hidravlik mexanizmini və rezin komplektini yeniləyin." },
+          { "kod": "P0731", "sistem": "Ötürmə Mexanizmi", "izah": "Birinci pillədə hərəkətə başlayarkən mühərrik dövriyyəsi artır amma avtomobil çox gec və ya vuraraq reaksiya verir.", "sebeb": "Birinci pillənin hidravlik porşeni rezin contanın aşınması səbəbindən vurduğu yağı kənara buraxır.", "hell": "Sürət qutusunu sökərək birinci pillənin daxili hidravlik mexanizmini və rezin komplektini yeniləyin." }
         ]
       }
     ]
-  }
-]
-
-
-
-
-
-
-
-
-
-
-
-
-[
+  },
   {
     "marka": "Chevrolet",
     "hisseler": [
@@ -750,23 +644,7 @@
         ]
       }
     ]
-  }
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[
+  },
   {
     "marka": "Lexus",
     "hisseler": [
@@ -831,22 +709,7 @@
         ]
       }
     ]
-  }
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-[
+  },
   {
     "marka": "Ford",
     "hisseler": [
@@ -905,29 +768,11 @@
           { "kod": "P0902", "sistem": "Debriyaj Aktuatoru", "izah": "Debriyaj aktuatorunun idarəetmə dövrəsində TCM tərəfindən çox aşağı müqavimət (qısaqapanma) oxunur.", "sebeb": "Aktuator motorunun daxilinə su və ya palçıq sızaraq elektron platada ciddi qısaqapanma yaradıb.", "hell": "Aktuatorun elektrik fişkasını qurulayın, qısaqapanma təsdiqlənərsə motoru bütövlükdə yenisi ilə əvəzləyin." },
           { "kod": "P2831", "sistem": "Ötürmə Çəngəli", "izah": "PowerShift qutusunda 'A' ötürmə çəngəlinin (Shift Fork) mövqeyi idarəetmə bloku tərəfindən oxuna bilmir.", "sebeb": "Ötürmə çəngəlini hərəkət etdirən barabandakı fiksator sıradan çıxıb və ya aktuator motoru çəngəli itələyə bilmir.", "hell": "Sürət qutusunu sökərək ötürmə çəngəlini və onun hərəkət mexanizmini vizual təftiş edib təmir edin." },
           { "kod": "P2832", "sistem": "Ötürmə Çəngəli", "izah": "'A' ötürmə çəngəlinin performansı qeyri-sabitdir və vites keçidləri zamanı ilişərək sürüşmə yaradır.", "sebeb": "Quru debriyaj paketindən qopan metal və toz qırıntıları çəngəlin hərəkət yolunu tıxayaraq onu dondurub.", "hell": "Sürət qutusu karterini açaraq daxilini xüsusi toz təmizləyicilərlə yuyun və çəngəli sərbəstləşdirin." },
-          { "kod": "P2836", "sistem": "Ötürmə Çəngəli", "izah": "PowerShift qutusunda 'B' ötürmə çəngəlinin elektrik dövrəsində fəaliyyətsizlik və kəsinti qeydə alınıb.", "sebeb": "B çəngəlini idarə edən aktuator motorunda nasazlıq var və ya çəngəlin mövqe sensoru elektron əlaqəni itirib.", "hell": "B aktuator motorunun işini cihazla test edin və nasazlıq daxildədirsə qutunu sökərək çəngəli əvəzləyin." },
+          { "kod": "P2836", "sistem": "Ötürmə Çəngəli", "izah": "PowerShift qutusunda 'B' ötürmə çəngəlinin elektrik dövrəsində fəaliyyətsizlik və kəsinti qeydə alınıb.", "sebeb": "B çəngəlini idarə edən aktuator motorunda nasazlıq var və ya çəngəlin mövqe sensoru elektron əlaqəni itirib.", "hell": "B aktuator motorunun işini cihazla test edin və nasazlıq daxildədirsə qutunu sökərək çəngəli əvəzləyin." }
         ]
       }
     ]
-  }
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[
+  },
   {
     "marka": "Mazda",
     "hisseler": [
@@ -986,38 +831,11 @@
           { "kod": "P0771", "sistem": "Ötürmə Solenoidi", "izah": "'E' ötürmə solenoidinin idarəetmə dövrəsində elektron kəsinti aşkarlanıb və sistem bloklanıb.", "sebeb": "Solenoid daxilindəki mis sarğıda qısaqapanma var və ya TCM platasından gələn elektrik xətti yanıb.", "hell": "Elektron platanı və 'E' solenoidini multimetrlə yoxlayın, arızalı komponenti yeni detalla əvəzləyin." },
           { "kod": "P0776", "sistem": "Təzyiq İdarəetmə Sistemi", "izah": "Təzyiqə nəzarət edən 'B' solenoidinin elektron dövrəsində müqavimət fərqi yaranıb və idarəsizlik qeydə alınıb.", "sebeb": "Solenoidin idarəetmə kabelində qısaqapanma və ya hərəkətli klapanda qalıcı mexaniki donma mövcuddur.", "hell": "Elektrik xəttindəki qısaqapanmanı yoxladıqdan sonra zədəli təzyiq solenoidini yeni detalla əvəzləyin." },
           { "kod": "P0841", "sistem": "Təzyiq Sensoru", "izah": "Sürət qutusunun hidravlik təzyiq sensorunun oxuduğu dəyərlər TCM-in real idarəetmə tələblərini qarşılamır.", "sebeb": "Sensorun qəbuledici diafraqmasına sərt metal qırıntısı ilişərək onun təzyiqi oxuma həssaslığını fiziki olaraq məhv edib.", "hell": "Təzyiq sensorunu yeni orijinal hissə ilə əvəzləyərək idarəetmə blokunda yenidən kalibrasiya prosesi aparın." },
-          { "kod": "P0882", "sistem": "İdarəetmə Sistemi", "izah": "TCM modulunun qidalanma gərginliyində (Power Input) kəsinti və ya idarəetməni söndürən kəskin aşağı düşmə var.", "sebeb": "Avtomobilin akkumulyator gərginliyi zəifləyib və ya TCM blokuna cərəyan ötürən ana elektrik relesi yanaraq xarab olub.", "hell": "Akkumulyatoru və sürət qutusunun qidalanma relelərini xüsusi cihazla yoxlayaraq sabit cərəyan axınını bərpa edin." },
+          { "kod": "P0882", "sistem": "İdarəetmə Sistemi", "izah": "TCM modulunun qidalanma gərginliyində (Power Input) kəsinti və ya idarəetməni söndürən kəskin aşağı düşmə var.", "sebeb": "Avtomobilin akkumulyator gərginliyi zəifləyib və ya TCM blokuna cərəyan ötürən ana elektrik relesi yanaraq xarab olub.", "hell": "Akkumulyatoru və sürət qutusunun qidalanma relelərini xüsusi cihazla yoxlayaraq sabit cərəyan axınını bərpa edin." }
         ]
       }
     ]
-  }
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[
+  },
   {
     "marka": "Volvo",
     "hisseler": [
@@ -1080,20 +898,7 @@
         ]
       }
     ]
-  }
-]
-
-
-
-
-
-
-
-
-
-
-
-[
+  },
   {
     "marka": "Mitsubishi",
     "hisseler": [
