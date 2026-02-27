@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Young Diagnose - Pro Forum</title>
+    <link rel="stylesheet" href="community.css"> 
+</head>
+<body>
+
+    <nav class="top-navbar">
+        <div class="nav-left">
+            <span class="logo-icon">🖲️</span>
+            <h1 class="logo-text">Young <span>Diagnose</span></h1>
+        </div>
+        
+        <ul class="nav-links">
+            <li class="active">Bütün Mövzular</li>
+            <li>Son Mövzular</li>
+            <li>Ən Yaxşılar</li>
+            <li onclick="window.location.href='gateway.html'" style="color: #007bff; cursor: pointer;">🏠 Gateway</li>
+        </ul>
+
+        <div class="nav-right">
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="nav-icon">🔔 <span class="badge">3</span></div>
+            <div class="nav-icon" onclick="toggleChat()">✉️ <span class="badge">5</span></div>
+            <div class="user-profile">
+                <span class="settings-icon">⚙️</span>
+                <span>Eldar</span>
+                <span class="dropdown-arrow">▼</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="forum-container">
+        
+        <aside class="left-sidebar">
+            <button class="btn-new-topic">+ Yeni Mövzu Yarat</button>
+
+            <div class="widget">
+                <h3 class="widget-title">İndi Populyar Mövzular</h3>
+                <div class="trend-item">
+                    <div class="trend-badge bg-red">P0300</div>
+                    <div class="trend-info">
+                        <p>P0300 – Silindrlərdə Müəyyən Edilmiş Yandırma Xətaları</p>
+                        <span>📁 12 • 👤 AzerAuto • 3 saat əvvəl</span>
+                    </div>
+                </div>
+                <div class="trend-item">
+                    <div class="trend-badge bg-yellow">P0011</div>
+                    <div class="trend-info">
+                        <p>P0011 – Eksantrik Valının Vəziyyəti Xətası</p>
+                        <span>📁 5 • 👤 Ramin • 5 saat əvvəl</span>
+                    </div>
+                </div>
+                <div class="trend-item">
+                    <div class="trend-badge bg-green">C0252</div>
+                    <div class="trend-info">
+                        <p>Sabah işığı yanır. Hər şey normaldır, ancaq C0252 göstərir.</p>
+                        <span>📁 8 • 👤 Kenan • 1 gün əvvəl</span>
+                    </div>
+                </div>
+                <a href="#" class="show-more">Daha çox göstər ></a>
+            </div>
+
+            <div class="widget">
+                <h3 class="widget-title">Bölmələr & Ünsiyyət</h3>
+                <ul class="category-list">
+                    <li class="active"><span class="cat-icon">🚙</span> Diaqnostika üzrə Kömək</li>
+                    <li><span class="cat-icon">📕</span> Xəta Kodları (DTC)</li>
+                    <li><span class="cat-icon">⚙️</span> Adaptasiya və Kodlama</li>
+                    <li><span class="cat-icon">🔌</span> Texniki Məlumatlar</li>
+                    <li style="border-top: 1px solid #1e293b; margin-top: 10px; padding-top: 10px;">
+                        <span class="cat-icon">💬</span> Şəxsi Mesajlar (DM)
+                    </li>
+                    <li><span class="cat-icon">👥</span> Usta Qrupları (Çatlar)</li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="main-feed">
+            
+            <div class="dtc-search-box">
+                <label>DTC üzrə Axtar:</label>
+                <div class="dtc-input-group">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Xəta kodunuzu yazın...">
+                    <button class="btn-search">🔍</button>
+                </div>
+            </div>
+
+            <div class="feed-tabs">
+                <div class="tab active">💼 Əsas Mövzular</div>
+                <div class="tab">💬 Müzakirələr</div>
+                <div class="tab">🎥 Foto/Video Postlar</div>
+            </div>
+
+            <div class="posts-list">
+                
+                <article class="post-item">
+                    <div class="post-badge text-red">P0171</div>
+                    <div class="post-content">
+                        <h3>P0171 – Hava və Yanacaq Qarışığı Çox Kasıbdır</h3>
+                        <div class="post-meta">
+                            <span>🚙 Xəta</span> • <span>👤 Elvin Auto</span> • <span>🕒 2 saat əvvəl</span>
+                            <span class="media-tag">📸 2 Foto</span>
+                        </div>
+                    </div>
+                    <div class="post-stats">
+                        <span>💬 6</span>
+                        <span>👁️ 22.5k</span>
+                    </div>
+                </article>
+
+                <article class="post-item">
+                    <div class="post-badge text-yellow">P0552</div>
+                    <div class="post-content">
+                        <h3>Problemli ABS Sensoru - Dəyişdim amma yenə işıq yanır</h3>
+                        <div class="post-meta">
+                            <span>🔧 Diaqnostika</span> • <span>👤 Usta_Ali</span> • <span>🕒 5 saat əvvəl</span>
+                            <span class="media-tag">🎥 Video</span>
+                        </div>
+                    </div>
+                    <div class="post-stats">
+                        <span>💬 14</span>
+                        <span>👁️ 15.8k</span>
+                    </div>
+                </article>
+
+                <article class="post-item">
+                    <div class="post-badge text-green">B1234</div>
+                    <div class="post-content">
+                        <h3>B1234 – Təhlükəsizlik Yastığında Xəta (Airbag). Necə silim?</h3>
+                        <div class="post-meta">
+                            <span>💥 Airbag</span> • <span>👤 Vüqar Auto</span> • <span>🕒 1 gün əvvəl</span>
+                        </div>
+                    </div>
+                    <div class="post-stats">
+                        <span>💬 18</span>
+                        <span>👁️ 37.2k</span>
+                    </div>
+                </article>
+
+                <article class="post-item">
+                    <div class="post-badge text-gray">Ümumi</div>
+                    <div class="post-content">
+                        <h3>Mühərrik işığı yanır. Kömək edə bilərsiniz? (Log faylı əlavə edilib)</h3>
+                        <div class="post-meta">
+                            <span>☕ Sual</span> • <span>👤 Usta_Hasan</span> • <span>🕒 1 gün əvvəl</span>
+                            <span class="media-tag">📊 Log faylı</span>
+                        </div>
+                    </div>
+                    <div class="post-stats">
+                        <span>💬 7</span>
+                        <span>👁️ 12.4k</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <aside class="right-sidebar">
+            
+            <div class="widget">
+                <h3 class="widget-title">Ən Yaxşı Cavabverənlər</h3>
+                <ul class="top-users">
+                    <li>
+                        <img src="https://ui-avatars.com/api/?name=Ismayil&background=0D8ABC&color=fff" alt="User">
+                        <div class="user-info">
+                            <strong>İsmayıl</strong>
+                            <span>2,500 xal</span>
+                        </div>
+                        <span class="rank-score">2,390 ⭐</span>
+                    </li>
+                    <li>
+                        <img src="https://ui-avatars.com/api/?name=Aslan+M&background=f59e0b&color=fff" alt="User">
+                        <div class="user-info">
+                            <strong>Aslan Məmmədov</strong>
+                            <span>2,560 xal</span>
+                        </div>
+                        <span class="rank-score">2,100 ⭐</span>
+                    </li>
+                    <li>
+                        <img src="https://ui-avatars.com/api/?name=Nicat+B&background=10b981&color=fff" alt="User">
+                        <div class="user-info">
+                            <strong>Nicat Bayramov</strong>
+                            <span>2,100 xal</span>
+                        </div>
+                        <span class="rank-score">1,950 ⭐</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="widget quick-post-widget">
+                <div class="widget-header">
+                    <span class="icon">📝</span>
+                    <h3>DTC Xətası Göndər</h3>
+                </div>
+                <div class="quick-post-form">
+                    <label>DTC Kodu</label>
+                    <select>
+                        <option>Xəta Kodları (DTC)</option>
+                        <option>P0171</option>
+                        <option>P0300</option>
+                    </select>
+
+                    <label>Başlıq</label>
+                    <input type="text" placeholder="Başlıq məlumatı...">
+
+                    <label>Ətraflı Məlumat</label>
+                    <textarea placeholder="Problemi ətraflı təsvir edin..."></textarea>
+
+                    <div class="media-upload-tools">
+                        <button type="button" class="media-btn">📷 Foto</button>
+                        <button type="button" class="media-btn">🎥 Video</button>
+                    </div>
+
+                    <button class="btn-submit" onclick="submitPost(this)">Mövzunu Yarat</button>
+                </div>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <script src="community.js"></script>
+</body>
+</html>
