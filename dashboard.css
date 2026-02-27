@@ -1,0 +1,666 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body, html {
+    margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0b0f19; color: #e2e8f0; display: flex; height: 100vh; overflow: hidden;
+}
+
+/* БОКОВОЕ МЕНЮ */
+.sidebar { width: 260px; background-color: #111827; border-right: 1px solid #1f2937; display: flex; flex-direction: column; z-index: 10; }
+.logo-container { display: flex; align-items: center; padding: 25px 20px; border-bottom: 1px solid #1f2937; margin-bottom: 15px; }
+.logo-icon { font-size: 28px; margin-right: 10px; }
+.logo-text { color: #ffffff; font-size: 20px; margin: 0; font-weight: 800; letter-spacing: 1px;}
+/* Делаем меню прокручиваемым, если оно не влезает в экран */
+.sidebar ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    flex-grow: 1; 
+    overflow-y: auto; /* Добавляет скролл */
+    padding-bottom: 20px; /* Отступ снизу, чтобы последний пункт не прилипал */
+}
+
+/* Красивый тонкий ползунок прокрутки для меню (чтобы не было уродливой серой полосы) */
+.sidebar ul::-webkit-scrollbar {
+    width: 4px;
+}
+.sidebar ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+.sidebar ul::-webkit-scrollbar-thumb {
+    background: #374151; 
+    border-radius: 10px;
+}
+.sidebar ul::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6; 
+}
+.sidebar li { padding: 16px 20px; margin: 4px 10px; border-radius: 8px; cursor: pointer; color: #9ca3af; font-size: 15px; font-weight: 500; display: flex; align-items: center; transition: 0.2s; }
+.menu-icon { font-size: 18px; margin-right: 15px; opacity: 0.7; }
+.sidebar li:hover { background-color: #1f2937; color: #ffffff; }
+.sidebar li.active { background-color: #1e3a8a; color: #60a5fa; border-left: 4px solid #3b82f6; }
+.sidebar li.active .menu-icon { opacity: 1; }
+
+/* ГЛАВНАЯ РАБОЧАЯ ОБЛАСТЬ */
+.main-content { flex-grow: 1; padding: 20px 30px; background-color: #0b0f19; overflow-y: auto; position: relative; }
+.content-section { display: none; animation: fadeIn 0.3s ease; height: 100%; }
+.content-section.active-section { display: block; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* ==========================================================
+   ЭКРАН ПОДКЛЮЧЕНИЯ (СЕТКА: ПАНЕЛЬ + ИНФОЦЕНТР)
+   ========================================================== */
+.vci-connection-screen {
+    display: grid;
+    grid-template-columns: 450px 1fr; /* Левая панель 450px, правая занимает остальное */
+    gap: 50px; align-items: center; height: 85vh;
+    max-width: 1100px; margin: 0 auto;
+}
+
+/* ЛЕВАЯ ЧАСТЬ: ПАНЕЛЬ */
+.vci-manager-panel {
+    background: linear-gradient(145deg, rgba(17, 24, 39, 0.95), rgba(11, 15, 25, 0.98));
+    border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 20px; padding: 50px 40px; 
+    text-align: center; box-shadow: 0 0 50px rgba(59, 130, 246, 0.1), inset 0 0 20px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px); position: relative; overflow: hidden;
+    animation: slideUp 0.5s ease;
+}
+@keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.vci-manager-panel::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, transparent, #3b82f6, transparent); }
+
+.radar-icon-wrapper { width: 80px; height: 80px; margin: 0 auto 25px auto; background: rgba(59, 130, 246, 0.1); border-radius: 50%; display: flex; justify-content: center; align-items: center; border: 1px solid rgba(59, 130, 246, 0.4); box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); position: relative; }
+.radar-icon-wrapper .main-icon { font-size: 35px; z-index: 2; }
+.radar-icon-wrapper::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 50%; border: 2px solid #3b82f6; animation: pulse 2s infinite; opacity: 0; z-index: 1; }
+@keyframes pulse { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(1.6); opacity: 0; } }
+
+.vci-manager-panel h2 { color: #f3f4f6; margin-top: 0; font-size: 26px; font-weight: 700; letter-spacing: 1px; }
+.vci-manager-panel p { color: #9ca3af; font-size: 15px; margin-bottom: 35px; }
+
+.vci-buttons { display: flex; flex-direction: column; gap: 16px; }
+.vci-btn { background-color: rgba(31, 41, 55, 0.6); border: 1px solid #374151; color: #e2e8f0; padding: 16px; font-size: 16px; border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; position: relative; }
+.btn-icon { margin-right: 12px; font-size: 20px; color: #60a5fa; }
+.vci-btn:hover { background-color: rgba(59, 130, 246, 0.1); border-color: #3b82f6; box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); color: #ffffff; transform: translateY(-3px); }
+.vci-btn-outline { background: transparent; border: 1px dashed #4b5563; color: #9ca3af; padding: 16px; font-size: 16px; border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s; }
+.vci-btn-outline:hover { border: 1px solid #9ca3af; background: rgba(255,255,255,0.05); color: #fff;}
+.loader-text { color: #60a5fa; margin-top: 25px; font-weight: bold; font-size: 15px; text-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
+
+/* ПРАВАЯ ЧАСТЬ: ИНФОЦЕНТР */
+.vci-info-center { display: flex; flex-direction: column; gap: 25px; animation: slideLeft 0.6s ease; }
+@keyframes slideLeft { from { transform: translateX(30px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+.info-card {
+    background: linear-gradient(145deg, rgba(31, 41, 55, 0.4), rgba(17, 24, 39, 0.6));
+    border: 1px solid rgba(55, 65, 81, 0.6); border-radius: 16px; padding: 25px;
+    backdrop-filter: blur(5px); box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.info-header { display: flex; align-items: center; margin-bottom: 20px; border-bottom: 1px solid rgba(75, 85, 99, 0.4); padding-bottom: 15px; }
+.info-icon { font-size: 22px; margin-right: 15px; }
+.info-header h3 { color: #f3f4f6; margin: 0; font-size: 17px; font-weight: 600; letter-spacing: 0.5px; }
+
+/* Обновления */
+.update-list { display: flex; flex-direction: column; gap: 15px; }
+.update-item { display: flex; justify-content: space-between; align-items: center; background: rgba(17, 24, 39, 0.5); padding: 15px; border-radius: 10px; border: 1px solid rgba(55, 65, 81, 0.4); transition: 0.2s; }
+.update-item:hover { border-color: rgba(59, 130, 246, 0.4); background: rgba(31, 41, 55, 0.8); }
+.upd-text { color: #d1d5db; font-size: 14px; line-height: 1.4; }
+.upd-text strong { color: #60a5fa; }
+.upd-text small { color: #9ca3af; font-size: 12px; }
+.btn-download { background: rgba(59, 130, 246, 0.1); border: 1px solid #3b82f6; color: #60a5fa; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: bold; transition: 0.2s; }
+.btn-download:hover { background: #3b82f6; color: #fff; box-shadow: 0 0 10px rgba(59,130,246,0.5); }
+
+/* Подсказка OBD */
+.obd-hint-content { text-align: center; }
+.obd-illustration { display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(17, 24, 39, 0.5); border-radius: 12px; padding: 20px; margin-bottom: 15px; border: 1px dashed rgba(75, 85, 99, 0.6); }
+.steering-wheel { font-size: 35px; }
+.arrow-down { font-size: 20px; color: #60a5fa; margin: 5px 0; animation: bounce 1.5s infinite; }
+.obd-port-icon { background: rgba(59, 130, 246, 0.1); border: 1px solid #3b82f6; color: #60a5fa; padding: 6px 15px; border-radius: 8px; font-weight: bold; font-size: 14px; box-shadow: inset 0 0 10px rgba(59,130,246,0.2); }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+.obd-hint-content p { color: #9ca3af; font-size: 14px; line-height: 1.5; margin: 0; }
+
+/* ==========================================================
+   ОСТАЛЬНОЙ ИНТЕРФЕЙС (Тот, что появляется после входа)
+   ========================================================== */
+.top-status-bar { display: flex; justify-content: space-between; align-items: center; background-color: #111827; padding: 12px 25px; border-radius: 8px; border: 1px solid #1f2937; margin-bottom: 20px; }
+.status-left { display: flex; align-items: center; gap: 15px; }
+.status-item { font-size: 14px; color: #d1d5db; display: flex; align-items: center; }
+.divider { height: 15px; width: 1px; background-color: #374151; margin: 0 10px; }
+.dot { height: 10px; width: 10px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+.dot.green { background-color: #10b981; box-shadow: 0 0 8px #10b981; }
+.dot.red { background-color: #ef4444; box-shadow: 0 0 8px #ef4444; }
+.btn-disconnect { background-color: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid #ef4444; padding: 8px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+.btn-disconnect:hover { background-color: #ef4444; color: white; box-shadow: 0 0 15px rgba(239, 68, 68, 0.6); }
+
+.car-visualization-area { position: relative; height: 300px; border-radius: 12px; background-color: #111827; border: 1px solid #1f2937; margin-bottom: 20px; background-image: url('https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; box-shadow: inset 0 0 50px rgba(0,0,0,0.8); }
+.btn-new-topic { position: absolute; top: 20px; left: 20px; background-color: rgba(59, 130, 246, 0.2); border: 1px solid #3b82f6; color: #60a5fa; padding: 8px 15px; border-radius: 6px; cursor: pointer; }
+
+.modules-container { background-color: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 20px; }
+.modules-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1f2937; padding-bottom: 15px; margin-bottom: 20px; color: #9ca3af; font-size: 14px; }
+.modules-grid { display: flex; flex-wrap: wrap; gap: 15px; align-items: stretch; }
+.module-card { background-color: rgba(31, 41, 55, 0.5); border: 1px solid #374151; border-radius: 10px; padding: 15px; display: flex; align-items: center; width: calc(33.333% - 10px); transition: 0.2s; cursor: pointer; }
+.module-card:hover { background-color: rgba(59, 130, 246, 0.05); border-color: #3b82f6; transform: translateY(-2px); }
+.error-card { border-color: rgba(239, 68, 68, 0.4); background-color: rgba(239, 68, 68, 0.05); }
+.error-card:hover { border-color: #ef4444; background-color: rgba(239, 68, 68, 0.1); }
+.mod-icon { font-size: 30px; margin-right: 15px; opacity: 0.8; }
+.mod-info h4 { margin: 0 0 5px 0; color: #f3f4f6; font-size: 13px; font-weight: 600; }
+.mod-status { font-size: 12px; display: flex; align-items: center; }
+.mod-status.ok { color: #9ca3af; }
+.mod-status.error { color: #ef4444; font-weight: bold; }
+
+.full-scan-action { width: calc(33.333% - 10px); display: flex; align-items: stretch; }
+.btn-blue-glow { width: 100%; background: linear-gradient(135deg, #2563eb, #1d4ed8); border: none; border-radius: 10px; color: white; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; box-shadow: 0 0 15px rgba(37, 99, 235, 0.4); }
+.btn-blue-glow:hover { box-shadow: 0 0 25px rgba(37, 99, 235, 0.7); transform: translateY(-2px); }
+/* --- СТИЛЬ ДЛЯ ОШИБКИ ПОДКЛЮЧЕНИЯ --- */
+.error-text {
+    color: #ef4444; 
+    margin-top: 25px; 
+    font-weight: bold; 
+    font-size: 15px; 
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+    line-height: 1.5;
+    animation: fadeIn 0.3s ease;
+}
+/* ==========================================================
+   ЛОКАЛЬНАЯ ДИАГНОСТИКА (ВЫБОР МАРКИ АВТО)
+   ========================================================== */
+.local-diag-wrapper {
+    background-color: #0b0f19;
+    border-radius: 15px;
+    height: 100%; display: flex; flex-direction: column;
+}
+
+/* Шапка и поиск */
+.brand-header {
+    text-align: center; padding: 20px;
+}
+.brand-header h2 { color: #ffffff; font-size: 28px; margin-bottom: 20px; font-weight: 600; }
+.search-box {
+    position: relative; max-width: 500px; margin: 0 auto;
+}
+.search-icon {
+    position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #9ca3af; font-size: 18px;
+}
+.search-box input {
+    width: 100%; background-color: rgba(31, 41, 55, 0.5); border: 1px solid #374151;
+    color: white; padding: 15px 15px 15px 45px; border-radius: 25px; font-size: 16px;
+    transition: 0.3s;
+}
+.search-box input:focus { border-color: #3b82f6; outline: none; box-shadow: 0 0 15px rgba(59, 130, 246, 0.3); }
+
+/* Сетка брендов */
+.brand-grid {
+    display: grid;
+    /* Адаптивная сетка: на ноуте будет 6-7 колонок, на мобильном меньше */
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 30px; padding: 30px; flex-grow: 1; overflow-y: auto;
+}
+
+/* Стилизация отдельной марки */
+.brand-item {
+    display: flex; flex-direction: column; align-items: center; cursor: pointer; transition: 0.3s;
+}
+.brand-circle {
+    width: 90px; height: 90px; border-radius: 50%;
+    /* Эффект объемной 3D кнопки (Neumorphism) как на фото */
+    background: linear-gradient(145deg, #111827, #0b0f19);
+    box-shadow:  8px 8px 16px #05070c, -8px -8px 16px #111726;
+    display: flex; justify-content: center; align-items: center;
+    border: 2px solid transparent; transition: all 0.3s ease;
+    margin-bottom: 15px; padding: 15px;
+}
+.brand-circle img { max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 0 5px rgba(255,255,255,0.2)); }
+.brand-item span { color: #9ca3af; font-size: 15px; font-weight: 500; text-align: center; transition: 0.3s; }
+
+/* Эффекты при наведении и выборе */
+.brand-item:hover .brand-circle { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+.brand-item:hover span { color: #ffffff; }
+
+.brand-item.selected .brand-circle {
+    border-color: #3b82f6; background: rgba(59, 130, 246, 0.1);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.4), inset 0 0 15px rgba(59, 130, 246, 0.2);
+}
+.brand-item.selected span { color: #60a5fa; font-weight: bold; }
+
+/* Нижняя панель */
+.brand-actions {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 30px; border-top: 1px solid #1f2937; background-color: #0b0f19;
+}
+.btn-back {
+    background: transparent; border: 1px solid #4b5563; color: #9ca3af;
+    padding: 12px 25px; border-radius: 8px; cursor: pointer; font-size: 16px; transition: 0.3s;
+}
+.btn-back:hover { background: #1f2937; color: white; border-color: #9ca3af; }
+
+.brand-diag-btn { width: 300px; padding: 15px; font-size: 18px; }
+.disabled { opacity: 0.4; pointer-events: none; filter: grayscale(100%); }
+
+/* Кастомизация скролла для сетки */
+.brand-grid::-webkit-scrollbar { width: 6px; }
+.brand-grid::-webkit-scrollbar-track { background: transparent; }
+.brand-grid::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
+.brand-grid::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+/* ==========================================================
+   ЛОКАЛЬНАЯ ДИАГНОСТИКА: РАЗДЕЛЕНИЕ ЭКРАНА
+   ========================================================== */
+.local-diag-container {
+    display: grid;
+    grid-template-columns: 1fr 450px; /* Слева тянется, справа жестко 450px под панель */
+    gap: 30px;
+    height: 100%;
+}
+
+.local-diag-left {
+    background-color: #0b0f19;
+    border-radius: 15px;
+    border: 1px solid #1f2937;
+    display: flex; flex-direction: column;
+    overflow: hidden;
+}
+
+.local-diag-right {
+    background: linear-gradient(145deg, rgba(17, 24, 39, 0.4), rgba(11, 15, 25, 0.6));
+    border-radius: 15px;
+    border: 1px dashed #374151;
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px; position: relative;
+}
+
+.placeholder-content {
+    text-align: center; color: #4b5563;
+    animation: fadeIn 0.5s ease;
+}
+.placeholder-content .ghost-icon {
+    font-size: 60px; margin-bottom: 15px; opacity: 0.2;
+}
+/* ==========================================================
+   РАЗДЕЛ: MULTI SOFTLAR (БИБЛИОТЕКА ПРОГРАММ)
+   ========================================================== */
+.software-library-container {
+    height: 100%; display: flex; flex-direction: column;
+}
+
+/* Шапка библиотеки */
+.library-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 20px 20px 20px; border-bottom: 1px solid #1f2937;
+}
+.header-titles h2 { color: white; font-size: 28px; margin: 0 0 10px 0; }
+.header-titles p { color: #9ca3af; margin: 0; font-size: 15px; }
+
+/* Фильтры категорий */
+.software-filters {
+    display: flex; gap: 15px; padding: 25px 20px;
+    flex-wrap: wrap;
+}
+.filter-btn {
+    background: transparent; border: 1px solid #374151; color: #9ca3af;
+    padding: 10px 20px; border-radius: 20px; font-size: 14px; cursor: pointer;
+    transition: all 0.3s ease;
+}
+.filter-btn:hover { border-color: #60a5fa; color: white; }
+.filter-btn.active { background: #2563eb; border-color: #2563eb; color: white; box-shadow: 0 0 15px rgba(37, 99, 235, 0.4); }
+
+/* Сетка программ */
+.software-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px; padding: 0 20px 20px 20px; overflow-y: auto;
+}
+
+/* Карточка программы */
+.software-card {
+    background: linear-gradient(145deg, #111827, #0b0f19);
+    border: 1px solid #1f2937; border-radius: 16px;
+    padding: 25px; display: flex; flex-direction: column;
+    transition: 0.3s; position: relative; overflow: hidden;
+}
+.software-card:hover { transform: translateY(-5px); border-color: #3b82f6; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+
+/* Иконка программы */
+.soft-icon-wrapper {
+    width: 60px; height: 60px; border-radius: 12px; background: rgba(255, 255, 255, 0.05);
+    display: flex; justify-content: center; align-items: center; margin-bottom: 20px;
+}
+.soft-icon-wrapper img { max-width: 40px; max-height: 40px; object-fit: contain; }
+
+/* Текст карточки */
+.soft-details { flex-grow: 1; margin-bottom: 20px; }
+.soft-details h3 { color: white; margin: 0 0 10px 0; font-size: 20px; }
+.soft-details p { color: #9ca3af; margin: 0 0 15px 0; font-size: 14px; line-height: 1.5; }
+
+.soft-meta { display: flex; justify-content: space-between; font-size: 13px; color: #6b7280; font-weight: bold; }
+.soft-meta span { background: #1f2937; padding: 5px 10px; border-radius: 6px; }
+
+/* Кнопка загрузки */
+.btn-download-soft {
+    width: 100%; background: transparent; border: 1px solid #3b82f6; color: #60a5fa;
+    padding: 12px; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold;
+    transition: 0.3s;
+}
+.btn-download-soft:hover { background: #3b82f6; color: white; box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
+
+/* Анимация загрузки (зеленая кнопка) */
+.btn-download-soft.downloading { background: #10b981; border-color: #10b981; color: white; pointer-events: none; }
+/* ==========================================================
+   РАЗДЕЛ: SIFIRLAMA (СЕРВИСНЫЕ ФУНКЦИИ И СБРОСЫ)
+   ========================================================== */
+.reset-container {
+    height: 100%; display: flex; flex-direction: column; overflow-y: auto;
+}
+
+.reset-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px; padding: 20px;
+}
+
+/* Карточка сброса */
+.reset-card {
+    background: linear-gradient(145deg, rgba(17, 24, 39, 0.8), rgba(11, 15, 25, 0.9));
+    border: 1px solid #1f2937; border-radius: 16px; padding: 20px;
+    display: flex; flex-direction: column; text-align: center;
+    transition: 0.3s; position: relative; overflow: hidden;
+}
+.reset-card:hover { transform: translateY(-5px); border-color: #4b5563; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+
+/* Иконки разных цветов (как лампочки на панели приборов) */
+.reset-icon {
+    width: 70px; height: 70px; border-radius: 50%; margin: 0 auto 15px auto;
+    display: flex; justify-content: center; align-items: center; font-size: 32px;
+    background: #0f172a; border: 1px solid #1e293b; transition: 0.3s;
+}
+.reset-card:hover .reset-icon { transform: scale(1.1); }
+
+/* Цветовые свечения для разных функций */
+.yellow-glow { box-shadow: 0 0 20px rgba(234, 179, 8, 0.2); border-color: rgba(234, 179, 8, 0.4); }
+.red-glow { box-shadow: 0 0 20px rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.4); }
+.blue-glow { box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.4); }
+.orange-glow { box-shadow: 0 0 20px rgba(249, 115, 22, 0.2); border-color: rgba(249, 115, 22, 0.4); }
+.green-glow { box-shadow: 0 0 20px rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.4); }
+.cyan-glow { box-shadow: 0 0 20px rgba(6, 182, 212, 0.2); border-color: rgba(6, 182, 212, 0.4); }
+.purple-glow { box-shadow: 0 0 20px rgba(168, 85, 247, 0.2); border-color: rgba(168, 85, 247, 0.4); }
+
+/* Текст внутри карточки */
+.reset-info { flex-grow: 1; margin-bottom: 20px; }
+.reset-info h3 { color: #f3f4f6; margin: 0 0 10px 0; font-size: 18px; font-weight: 600; }
+.reset-info p { color: #9ca3af; margin: 0; font-size: 13px; line-height: 1.5; }
+
+/* Кнопка "İcra et" (Выполнить) */
+.btn-execute {
+    width: 100%; background: #1f2937; border: 1px solid #374151; color: #e2e8f0;
+    padding: 12px; border-radius: 8px; cursor: pointer; font-size: 15px; font-weight: bold;
+    transition: 0.3s;
+}
+.btn-execute:hover { background: #3b82f6; border-color: #3b82f6; color: white; box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
+
+/* Статусы во время сброса */
+.btn-execute.processing { background: #d97706; border-color: #d97706; color: white; pointer-events: none; animation: pulse 1.5s infinite; }
+.btn-execute.success { background: #10b981; border-color: #10b981; color: white; pointer-events: none; box-shadow: 0 0 15px rgba(16, 185, 129, 0.4); }
+/* ==========================================================
+   РАЗДЕЛ SIFIRLAMA: ПОДСВЕТКА И ВЫДЕЛЕНИЕ КАРТОЧЕК
+   ========================================================== */
+.reset-card-item { cursor: pointer; border: 2px solid transparent; }
+
+/* Подсветка при клике на карточку сброса */
+.reset-card-item.selected {
+    border-color: #3b82f6; 
+    background: rgba(59, 130, 246, 0.1);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Цветные свечения для иконок сброса */
+.yellow-glow { box-shadow: 0 0 15px rgba(234, 179, 8, 0.2); border: 1px solid rgba(234, 179, 8, 0.5); }
+.red-glow { box-shadow: 0 0 15px rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.5); }
+.blue-glow { box-shadow: 0 0 15px rgba(59, 130, 246, 0.2); border: 1px solid rgba(59, 130, 246, 0.5); }
+.orange-glow { box-shadow: 0 0 15px rgba(249, 115, 22, 0.2); border: 1px solid rgba(249, 115, 22, 0.5); }
+.green-glow { box-shadow: 0 0 15px rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.5); }
+.cyan-glow { box-shadow: 0 0 15px rgba(6, 182, 212, 0.2); border: 1px solid rgba(6, 182, 212, 0.5); }
+/* ==========================================================
+   РАЗДЕЛ SIFIRLAMA: ИДЕАЛЬНЫЙ СПИСОК ФУНКЦИЙ (БЕЗ СПЛЮЩИВАНИЯ)
+   ========================================================== */
+.reset-list-container {
+    display: flex; flex-direction: column; gap: 15px; 
+    padding: 20px; overflow-y: auto; flex-grow: 1;
+}
+
+.reset-list-item {
+    display: flex; align-items: center;
+    background: linear-gradient(145deg, rgba(31, 41, 55, 0.4), rgba(17, 24, 39, 0.6));
+    border: 1px solid #1f2937; border-radius: 12px;
+    padding: 15px 20px; cursor: pointer; transition: all 0.3s ease;
+}
+
+.reset-list-item:hover {
+    transform: translateX(8px); /* Легкий сдвиг вправо при наведении */
+    border-color: #4b5563; background: rgba(31, 41, 55, 0.8);
+}
+
+.reset-list-item.selected {
+    border-color: #3b82f6; background: rgba(59, 130, 246, 0.15);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.reset-list-icon {
+    width: 50px; height: 50px; min-width: 50px; /* Запрещаем иконке сплющиваться */
+    border-radius: 10px; display: flex; justify-content: center; align-items: center;
+    font-size: 24px; margin-right: 15px; background: #0f172a;
+}
+
+.reset-list-text {
+    display: flex; flex-direction: column; justify-content: center; text-align: left;
+}
+.reset-list-text h3 {
+    color: #f3f4f6; margin: 0 0 5px 0; font-size: 16px; font-weight: bold;
+}
+.reset-list-text p {
+    color: #9ca3af; margin: 0; font-size: 13px; line-height: 1.4;
+}
+/* ==========================================================
+   РАЗДЕЛ: AI ASSISTANT (ЧАТ С ИСКУССТВЕННЫМ ИНТЕЛЛЕКТОМ)
+   ========================================================== */
+.ai-chat-container {
+    display: flex; flex-direction: column; height: 100%; width: 100%;
+}
+
+.ai-chat-header {
+    background: #1f2937; padding: 15px 20px; border-bottom: 1px solid #374151;
+}
+
+.ai-chat-messages {
+    flex-grow: 1; padding: 20px; overflow-y: auto;
+    display: flex; flex-direction: column; gap: 15px;
+}
+
+/* Пузыри сообщений */
+.ai-msg {
+    max-width: 85%; padding: 15px; border-radius: 12px; font-size: 14px; line-height: 1.5;
+    animation: fadeIn 0.3s ease;
+}
+
+.ai-msg.bot {
+    align-self: flex-start; background: #1e293b; color: #e2e8f0; border: 1px solid #334155;
+    border-bottom-left-radius: 2px;
+}
+
+.ai-msg.user {
+    align-self: flex-end; background: #2563eb; color: white;
+    border-bottom-right-radius: 2px; box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+/* Поле ввода */
+.ai-chat-input-area {
+    display: flex; padding: 15px; background: #111827; border-top: 1px solid #374151; gap: 10px;
+}
+
+.ai-chat-input-area input {
+    flex-grow: 1; background: #1f2937; border: 1px solid #4b5563; color: white;
+    padding: 12px 20px; border-radius: 25px; font-size: 15px; outline: none; transition: 0.3s;
+}
+.ai-chat-input-area input:focus { border-color: #3b82f6; box-shadow: 0 0 10px rgba(59, 130, 246, 0.3); }
+
+.btn-ai-send {
+    background: #3b82f6; color: white; border: none; padding: 0 20px; border-radius: 25px;
+    cursor: pointer; font-weight: bold; transition: 0.3s;
+}
+.btn-ai-send:hover { background: #2563eb; transform: scale(1.05); }
+/* ==========================================================
+   РАЗДЕЛ: SİSTEM YENİLƏMƏLƏRİ (МЕНЕДЖЕР ЗАГРУЗОК)
+   ========================================================== */
+.update-list-card {
+    display: flex; align-items: center; 
+    background: linear-gradient(145deg, rgba(31, 41, 55, 0.4), rgba(17, 24, 39, 0.8));
+    border: 1px solid #1f2937; border-radius: 12px; padding: 20px; margin-bottom: 15px; 
+    transition: all 0.3s ease;
+}
+.update-list-card:hover { 
+    border-color: #3b82f6; box-shadow: 0 5px 20px rgba(0,0,0,0.4); 
+    transform: translateY(-3px);
+}
+
+.update-icon {
+    width: 65px; height: 65px; min-width: 65px; border-radius: 12px; 
+    display: flex; justify-content: center; align-items: center;
+    font-size: 30px; margin-right: 20px;
+}
+
+.update-info { flex-grow: 1; padding-right: 20px; }
+.update-info h3 { color: white; margin: 0 0 8px 0; font-size: 18px; font-weight: 600; }
+.update-info p { color: #9ca3af; margin: 0 0 12px 0; font-size: 14px; line-height: 1.5; }
+
+.update-meta { 
+    display: inline-block; background: #111827; border: 1px solid #374151;
+    color: #94a3b8; padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: bold; 
+}
+
+.update-btn-area { min-width: 150px; text-align: right; }
+
+.btn-download-update {
+    width: 100%; background: transparent; border: 1px solid #3b82f6; color: #60a5fa; 
+    padding: 12px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.btn-download-update:hover { background: #3b82f6; color: white; box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
+
+/* Анимация скачивания и установки */
+.btn-download-update.downloading { background: #3b82f6; color: white; border-color: #3b82f6; pointer-events: none; }
+.btn-download-update.installing { background: #f59e0b; color: white; border-color: #f59e0b; pointer-events: none; animation: pulse 1.5s infinite; }
+.btn-download-update.done { background: #10b981; color: white; border-color: #10b981; pointer-events: none; }
+/* ==========================================================
+   РАЗДЕЛ: AVTOMOBİL ƏHATƏSİ (ПОКРЫТИЕ МАРОК)
+   ========================================================== */
+.coverage-card {
+    display: flex; align-items: center; background: #111827;
+    border: 1px solid #1f2937; border-radius: 12px; padding: 15px;
+    transition: all 0.3s ease;
+}
+.coverage-card:hover {
+    background: #1e293b; border-color: #4b5563; transform: scale(1.02);
+}
+
+.coverage-icon {
+    width: 60px; height: 60px; min-width: 60px; border-radius: 50%;
+    background: #0f172a; border: 1px solid #374151; display: flex; 
+    justify-content: center; align-items: center; margin-right: 15px; padding: 10px;
+}
+.coverage-icon img {
+    max-width: 100%; max-height: 100%; object-fit: contain;
+}
+
+.coverage-info { flex-grow: 1; }
+.coverage-info h3 { color: white; margin: 0 0 5px 0; font-size: 16px; }
+.coverage-info p { color: #9ca3af; margin: 0 0 10px 0; font-size: 12px; line-height: 1.4; }
+
+.cov-years {
+    display: inline-block; background: rgba(59, 130, 246, 0.1); color: #60a5fa;
+    padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: bold;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+/* ==========================================================
+   ПРЕМИУМ ПЛЕЙСХОЛДЕР (ДЛЯ ПУСТЫХ ПРАВЫХ ПАНЕЛЕЙ)
+   ========================================================== */
+.premium-placeholder {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    width: 100%; height: 100%; text-align: center;
+    /* Легкое радиальное свечение на фоне */
+    background: radial-gradient(circle at center, rgba(31, 41, 55, 0.4) 0%, transparent 70%);
+    animation: fadeIn 0.8s ease;
+}
+
+.animated-gear-logo {
+    position: relative; width: 100px; height: 100px; margin-bottom: 25px;
+    display: flex; justify-content: center; align-items: center;
+    background: rgba(15, 23, 42, 0.6); border-radius: 50%;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.15), inset 0 0 20px rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.gear-icon {
+    font-size: 50px; color: #3b82f6; 
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+    /* Анимация медленного вращения */
+    animation: spinSlow 10s linear infinite; 
+}
+
+@keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.premium-placeholder h3 {
+    color: #f3f4f6; font-size: 22px; margin: 0 0 10px 0; font-weight: 600;
+}
+
+.premium-placeholder .subtitle {
+    color: #9ca3af; font-size: 14px; margin: 0 0 30px 0; max-width: 80%; line-height: 1.5;
+}
+
+.steps-list {
+    list-style: none; padding: 0; margin: 0; text-align: left;
+    display: flex; flex-direction: column; gap: 15px; width: 80%;
+}
+
+.steps-list li {
+    display: flex; align-items: center; color: #cbd5e1; font-size: 14px;
+    background: rgba(17, 24, 39, 0.6); padding: 15px 20px; border-radius: 12px;
+    border: 1px solid #1f2937; transition: 0.3s;
+}
+.steps-list li:hover {
+    border-color: #3b82f6; background: rgba(31, 41, 55, 0.8); transform: translateX(5px);
+}
+
+.step-num {
+    display: inline-flex; justify-content: center; align-items: center; min-width: 30px;
+    width: 30px; height: 30px; background: #3b82f6; color: white;
+    border-radius: 50%; font-weight: bold; margin-right: 15px; font-size: 14px;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+/* ==========================================================
+   РАЗДЕЛ: TARİXÇƏ (ИСТОРИЯ ОТЧЕТОВ)
+   ========================================================== */
+.history-card {
+    display: flex; align-items: center; background: linear-gradient(145deg, #111827, #0f172a);
+    border: 1px solid #1f2937; border-radius: 12px; padding: 20px; margin-bottom: 15px; 
+    transition: 0.3s;
+}
+.history-card:hover { border-color: #3b82f6; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+.history-icon {
+    width: 60px; height: 60px; min-width: 60px; border-radius: 12px; font-size: 28px;
+    display: flex; justify-content: center; align-items: center; margin-right: 20px;
+}
+
+.history-details { flex-grow: 1; padding-right: 20px; }
+.history-top { display: flex; align-items: center; gap: 15px; margin-bottom: 8px; }
+.history-top h3 { color: white; margin: 0; font-size: 18px; }
+.history-date { color: #9ca3af; font-size: 13px; font-weight: 500; }
+
+.history-details p { color: #94a3b8; margin: 0 0 12px 0; font-size: 14px; }
+
+.history-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+.badge { padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: bold; }
+.badge.error { background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); }
+.badge.success { background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); }
+.badge.system { background: rgba(59, 130, 246, 0.1); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+
+.history-actions { min-width: 130px; text-align: right; }
+.btn-report { 
+    background: transparent; border: 1px solid #4b5563; color: #e2e8f0; 
+    padding: 10px 15px; border-radius: 8px; cursor: pointer; transition: 0.3s; width: 100%;
+}
+.btn-report:hover { background: #374151; color: white; border-color: #9ca3af; }
+.btn-report.loading { background: #3b82f6; border-color: #3b82f6; color: white; pointer-events: none; }
