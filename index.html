@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YANG DIAGNOS - Xoş gəlmisiniz</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Eel bridge skripti -->
+    <script type="text/javascript" src="/eel.js"></script>
+</head>
+
+<body>
+
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="logo-container">
+                <span class="logo-icon">🖲️</span>
+                <h2 class="logo-text">Young Diagnose</h2>
+            </div>
+        </nav>
+
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Avtomobil Diaqnostikasının Gələcəyi</h1>
+                <p class="hero-subtitle">
+                    Süni intellekt dəstəkli, sürətli və dəqiq DTC analizi.
+                    Avtomobilinizin problemlərini saniyələr içində tapın.
+                </p>
+
+                <div class="auth-buttons">
+                    <button class="btn btn-blue-glow" id="open-login">Giriş</button>
+                    <button class="btn btn-outline" id="open-register">Qeydiyyat</button>
+                </div>
+
+                <a href="#about" class="scroll-down">⬇ Daha çox öyrən</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h2>Niyə "Young Diagnose"?</h2>
+            <p class="about-description">
+                Bizim proqram təminatımız avtomobil ustaları və həvəskarlar üçün yaradılıb.
+                Siz sadəcə kodları oxumursunuz, həm də süni intellektin köməyi ilə təmir üçün ən yaxşı həll yollarını
+                tapırsınız.
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feat-icon">⚡</div>
+                    <h3>Sürətli Auto-Scan</h3>
+                    <p>Bütün sistemləri saniyələr içində yoxlayın və dəqiq DTC kodlarını əldə edin.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feat-icon">🧠</div>
+                    <h3>AI Köməkçisi</h3>
+                    <p>Süni intellekt sizə problemin səbəbini və həll yollarını addım-addım izah edəcək.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feat-icon">🌐</div>
+                    <h3>Pro Forum</h3>
+                    <p>Digər ustalarla əlaqə qurun, təcrübə paylaşın və çətin nasazlıqları birlikdə həll edin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close-btn" id="close-login">&times;</span>
+            <div class="modal-icon">🔐</div>
+            <h2>Sistemə Giriş</h2>
+            <input type="text" placeholder="İstifadəçi adı (Login)" class="auth-input">
+            <input type="password" placeholder="Şifrə (Password)" class="auth-input">
+            <button class="btn btn-blue-glow w-100" onclick="window.location.href='gateway.html'">Daxil ol</button>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close-btn" id="close-register">&times;</span>
+            <div class="modal-icon">📝</div>
+            <h2>Yeni Hesab</h2>
+            <input type="text" id="reg-username" placeholder="İstifadəçi adı" class="auth-input">
+            <input type="email" id="reg-email" placeholder="E-poçt" class="auth-input">
+            <input type="password" id="reg-password" placeholder="Şifrə" class="auth-input">
+            <button id="reg-btn" class="btn btn-blue-glow w-100">Qeydiyyatdan keç</button>
+        </div>
+    </div>
+
+    <script>
+        const loginModal = document.getElementById('login-modal');
+        const registerModal = document.getElementById('register-modal');
+
+        document.getElementById('open-login').onclick = () => loginModal.style.display = 'flex';
+        document.getElementById('open-register').onclick = () => registerModal.style.display = 'flex';
+
+        document.getElementById('close-login').onclick = () => loginModal.style.display = 'none';
+        document.getElementById('close-register').onclick = () => registerModal.style.display = 'none';
+
+        window.onclick = function (event) {
+            if (event.target == loginModal) loginModal.style.display = 'none';
+            if (event.target == registerModal) registerModal.style.display = 'none';
+        }
+
+        const regBtn = document.getElementById('reg-btn');
+        const regPassword = document.getElementById('reg-password');
+
+        regBtn.onclick = function () {
+            const pwd = regPassword.value;
+            // Ən azı 6 simvol, 1 böyük hərf, 1 xüsusi simvol
+            const regex = /^(?=.*[A-Z])(?=.*[!@#\$%\^&\*\(\)_\+\-\=\[\]\{\};':"\\|,\.<>\/\?]).{6,}$/;
+
+            if (!regex.test(pwd)) {
+                alert("Şifrə ən azı 6 simvoldan ibarət olmalı, içində ən azı 1 böyük hərf və 1 xüsusi simvol olmalıdır.");
+                return;
+            }
+            alert("Qeydiyyat uğurla tamamlandı!");
+            registerModal.style.display = 'none';
+        }
+
+        // Bridge'i test etmək üçün funksiya
+        async function testPythonBridge() {
+            // Python-dakı 'python_mesajini_al' funksiyasını çağırırıq
+            let pythonCavabi = await eel.python_mesajini_al("Salam Python, men Frontend-əm!")();
+            console.log("Python-dan gələn cavab:", pythonCavabi);
+            alert(pythonCavabi);
+        }
+
+        // Səhifə yükləndikdə test etmək üçün aşağıdakı şərhi(comment) aça bilərsiniz
+        // window.onload = testPythonBridge;
+    </script>
+</body>
+
+</html>
